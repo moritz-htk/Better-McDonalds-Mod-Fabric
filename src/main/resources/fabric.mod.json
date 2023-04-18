@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "bettermcdonaldsmod",
+	"version": "${version}",
+	"name": "Better McDonalds Mod",
+	"description": "Many well-known McDonalds products have been added.",
+	"authors": [
+		"simon_mc",
+		"Volwert123"
+	],
+	"contact": {
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/better-mcdonalds-mod",
+		"sources": "https://github.com/simon-mc28/Better-McDonalds-Mod-Fabric"
+	},
+	"license": "MIT",
+	"icon": "assets/bettermcdonaldsmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "simon_mc.bettermcdonaldsmod.BetterMcDonaldsMod"
+		],
+		"client": [
+			"simon_mc.bettermcdonaldsmod.BetterMcDonaldsModClient"
+		],
+		"fabric-datagen": [
+			"simon_mc.bettermcdonaldsmod.DataGenerators"
+		]
+	},
+	"mixins": [
+		"bettermcdonaldsmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.19",
+		"minecraft": "~1.19.3",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
