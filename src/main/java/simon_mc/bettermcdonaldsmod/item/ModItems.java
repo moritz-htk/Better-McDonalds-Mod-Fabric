@@ -29,7 +29,7 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
     }
     public static void registerModItems() {
-        BetterMcDonaldsMod.LOGGER.info("Registering Mod Items for " + BetterMcDonaldsMod.MOD_ID);
+        BetterMcDonaldsMod.LOGGER.info("Registering ModItems for " + BetterMcDonaldsMod.MOD_ID);
         addItemsToItemGroup();
     }
 }

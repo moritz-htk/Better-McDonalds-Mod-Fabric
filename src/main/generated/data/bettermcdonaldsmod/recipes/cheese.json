@@ -6,11 +6,10 @@
       "item": "minecraft:milk_bucket"
     },
     {
-      "tag": "c:salt"
+      "item": "bettermcdonaldsmod:salt"
     }
   ],
   "result": {
-    "item": "bettermcdonaldsmod:cheese",
-    "count": 1
+    "item": "bettermcdonaldsmod:cheese"
   }
 }
