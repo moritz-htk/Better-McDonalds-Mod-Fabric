@@ -15,8 +15,8 @@ public class BetterMcDonaldsMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+        ModItemGroup.registerItemGroups();
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
-		ModItemGroup.registerItemGroups();
 	}
 }

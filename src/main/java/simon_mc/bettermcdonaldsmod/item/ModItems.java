@@ -21,7 +21,6 @@ public class ModItems {
     }
 
     public static void addItemsToItemGroup() {
-        // addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, SALT);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, SALT);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, CHEESE);
     }
