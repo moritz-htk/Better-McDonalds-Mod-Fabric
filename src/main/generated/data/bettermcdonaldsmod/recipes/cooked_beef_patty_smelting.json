@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "bettermcdonaldsmod:beef_patty"
+  },
+  "result": "bettermcdonaldsmod:cooked_beef_patty"
+}

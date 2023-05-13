@@ -2,12 +2,12 @@ package simon_mc.bettermcdonaldsmod.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import simon_mc.bettermcdonaldsmod.BetterMcDonaldsMod;
 
 public class ModItems {
@@ -15,14 +15,59 @@ public class ModItems {
             new Item(new FabricItemSettings()));
     public static final Item CHEESE = registerItem("cheese",
             new Item(new FabricItemSettings()));
+    public static final Item BEEF_PATTY = registerItem("beef_patty",
+            new Item(new FabricItemSettings()
+                    .food(new FoodComponent.Builder().hunger(2).saturationModifier(1f).meat().build())));
+    public static final Item COOKED_BEEF_PATTY = registerItem("cooked_beef_patty",
+            new Item(new FabricItemSettings()
+                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(6f).meat().build())));
+    public static final SwordItem KNIFE = registerSwordItem(
+            new SwordItem(new ToolMaterial() {
+                @Override
+                public int getDurability() {
+                    return 125;
+                }
+
+                @Override
+                public float getMiningSpeedMultiplier() {
+                    return 1.6f;
+                }
+
+                @Override
+                public float getAttackDamage() {
+                    return -2f;
+                }
+
+                @Override
+                public int getMiningLevel() {
+                    return 0;
+                }
+
+                @Override
+                public int getEnchantability() {
+                    return 0;
+                }
+
+                @Override
+                public Ingredient getRepairIngredient() {
+                    return Ingredient.ofItems(() -> Items.IRON_INGOT);
+                }
+            }, 3, -3, new Item.Settings().rarity(Rarity.COMMON)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BetterMcDonaldsMod.MOD_ID, name), item);
     }
 
+    private static SwordItem registerSwordItem(SwordItem item) {
+        return Registry.register(Registries.ITEM, new Identifier(BetterMcDonaldsMod.MOD_ID, "knife"), item);
+    }
+
     public static void addItemsToItemGroup() {
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, SALT);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, CHEESE);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, BEEF_PATTY);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, COOKED_BEEF_PATTY);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, KNIFE);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {
