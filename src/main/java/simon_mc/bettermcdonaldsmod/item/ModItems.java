@@ -52,7 +52,22 @@ public class ModItems {
                 public Ingredient getRepairIngredient() {
                     return Ingredient.ofItems(() -> Items.IRON_INGOT);
                 }
-            }, 3, -3, new Item.Settings().rarity(Rarity.COMMON)));
+            }, 3, -3, new Item.Settings().rarity(Rarity.COMMON)) {
+                @Override
+                public boolean hasRecipeRemainder() {
+                    return true;
+                }
+
+                @Override
+                public ItemStack getRecipeRemainder(ItemStack itemStack) {
+                    ItemStack retval = new ItemStack(this);
+                    retval.setDamage(itemStack.getDamage() + 1);
+                    if (retval.getDamage() >= retval.getMaxDamage()) {
+                        return ItemStack.EMPTY;
+                    }
+                    return retval;
+                }
+            });
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BetterMcDonaldsMod.MOD_ID, name), item);
