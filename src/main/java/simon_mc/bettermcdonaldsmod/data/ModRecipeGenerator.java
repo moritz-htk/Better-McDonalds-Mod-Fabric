@@ -23,7 +23,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SALT_BLOCK)
-                .input('#', ModItems.SALT)
+                .input('#', ModItemTagProvider.SALT)
                 .pattern("##")
                 .pattern("##")
                 .criterion(FabricRecipeProvider.hasItem(ModItems.SALT),
@@ -32,7 +32,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHEESE)
                 .input(Items.MILK_BUCKET)
-                .input(ModItems.SALT)
+                .input(ModItemTagProvider.SALT)
                 .criterion(FabricRecipeProvider.hasItem(ModItems.SALT),
                         FabricRecipeProvider.conditionsFromItem(ModItems.SALT))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.CHEESE)));
@@ -68,7 +68,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SWEET_SOUR_SAUCE)
                 .input(Items.WATER_BUCKET)
                 .input(Items.SUGAR)
-                .input(ModItems.SALT)
+                .input(ModItemTagProvider.SALT)
                 .input(Items.WHEAT)
                 .input(Items.ORANGE_DYE)
                 .criterion(FabricRecipeProvider.hasItem(ModItems.SALT),
@@ -78,7 +78,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.KETCHUP)
                 .input(Items.WATER_BUCKET)
                 .input(Items.SUGAR)
-                .input(ModItems.SALT)
+                .input(ModItemTagProvider.SALT)
                 .input(Items.RED_DYE)
                 .criterion(FabricRecipeProvider.hasItem(ModItems.SALT),
                         FabricRecipeProvider.conditionsFromItem(ModItems.SALT))

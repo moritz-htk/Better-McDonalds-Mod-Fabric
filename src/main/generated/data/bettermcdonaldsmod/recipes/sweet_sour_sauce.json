@@ -9,7 +9,7 @@
       "item": "minecraft:sugar"
     },
     {
-      "item": "bettermcdonaldsmod:salt"
+      "tag": "c:salt"
     },
     {
       "item": "minecraft:wheat"

@@ -12,23 +12,23 @@ import simon_mc.bettermcdonaldsmod.BetterMcDonaldsMod;
 
 public class ModItems {
     public static final Item SALT = registerItem("salt",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)));
     public static final Item CHEESE = registerItem("cheese",
-            new Item(new FabricItemSettings()));
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)));
     public static final Item BEEF_PATTY = registerItem("beef_patty",
-            new Item(new FabricItemSettings()
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(1f).meat().build())));
     public static final Item COOKED_BEEF_PATTY = registerItem("cooked_beef_patty",
-            new Item(new FabricItemSettings()
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
                     .food(new FoodComponent.Builder().hunger(3).saturationModifier(6f).meat().build())));
     public static final Item MAYONNAISE = registerItem("mayonnaise",
-            new Item(new FabricItemSettings()
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
                     .food(new FoodComponent.Builder().hunger(1).saturationModifier(2f).build())));
     public static final Item SWEET_SOUR_SAUCE = registerItem("sweet_sour_sauce",
-            new Item(new FabricItemSettings()
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
                     .food(new FoodComponent.Builder().hunger(1).saturationModifier(2f).build())));
     public static final Item KETCHUP = registerItem("ketchup",
-            new Item(new FabricItemSettings()
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
                     .food(new FoodComponent.Builder().hunger(1).saturationModifier(2f).build())));
     public static final SwordItem KNIFE = registerSwordItem(
             new SwordItem(new ToolMaterial() {
@@ -61,7 +61,7 @@ public class ModItems {
                 public Ingredient getRepairIngredient() {
                     return Ingredient.ofItems(() -> Items.IRON_INGOT);
                 }
-            }, 3, -3, new Item.Settings().rarity(Rarity.COMMON)) {
+            }, 3, -3, new FabricItemSettings().rarity(Rarity.COMMON)) {
                 @Override
                 public boolean hasRecipeRemainder() {
                     return true;

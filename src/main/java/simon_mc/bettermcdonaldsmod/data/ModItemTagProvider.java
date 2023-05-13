@@ -13,15 +13,15 @@ import simon_mc.bettermcdonaldsmod.item.ModItems;
 import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
+    public static final TagKey<Item> SALT = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "salt"));
+    public static final TagKey<Item> SAUCES = TagKey.of(Registries.ITEM.getKey(), new Identifier("bettermcdonaldsmod", "sauces"));
+
     public ModItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture, @Nullable BlockTagProvider blockTagProvider) {
         super(output, completableFuture, blockTagProvider);
     }
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        TagKey<Item> SALT = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "salt"));
-        TagKey<Item> SAUCES = TagKey.of(Registries.ITEM.getKey(), new Identifier("bettermcdonaldsmod", "sauces"));
-
         getOrCreateTagBuilder(SALT)
                 .add(ModItems.SALT);
 

@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "bettermcdonaldsmod:salt"
+      "tag": "c:salt"
     }
   },
   "pattern": [
@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "bettermcdonaldsmod:salt_block"
-  }
+  },
+  "show_notification": true
 }
