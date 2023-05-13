@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import simon_mc.bettermcdonaldsmod.block.ModBlocks;
 import simon_mc.bettermcdonaldsmod.item.ModItemGroup;
 import simon_mc.bettermcdonaldsmod.item.ModItems;
+import simon_mc.bettermcdonaldsmod.world.gen.ModWorldGeneration;
 
 public class BetterMcDonaldsMod implements ModInitializer {
 
@@ -18,5 +19,6 @@ public class BetterMcDonaldsMod implements ModInitializer {
         ModItemGroup.registerItemGroups();
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
+		ModWorldGeneration.generateModWorldGen();
 	}
 }
