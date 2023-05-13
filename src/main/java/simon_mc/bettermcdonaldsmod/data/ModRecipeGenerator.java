@@ -59,6 +59,31 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(ModItems.BEEF_PATTY))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.COOKED_BEEF_PATTY) + "_campfire_cooking"));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MAYONNAISE)
+                .input(Items.EGG)
+                .criterion(FabricRecipeProvider.hasItem(Items.EGG),
+                        FabricRecipeProvider.conditionsFromItem(Items.EGG))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.MAYONNAISE)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SWEET_SOUR_SAUCE)
+                .input(Items.WATER_BUCKET)
+                .input(Items.SUGAR)
+                .input(ModItems.SALT)
+                .input(Items.WHEAT)
+                .input(Items.ORANGE_DYE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.SALT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.SWEET_SOUR_SAUCE)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.KETCHUP)
+                .input(Items.WATER_BUCKET)
+                .input(Items.SUGAR)
+                .input(ModItems.SALT)
+                .input(Items.RED_DYE)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.SALT))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.KETCHUP)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KNIFE)
                 .input('I', Items.IRON_INGOT)
                 .input('S', Items.STICK)

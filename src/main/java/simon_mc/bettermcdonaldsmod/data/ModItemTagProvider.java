@@ -20,7 +20,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         TagKey<Item> SALT = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "salt"));
+        TagKey<Item> SAUCES = TagKey.of(Registries.ITEM.getKey(), new Identifier("bettermcdonaldsmod", "sauces"));
+
         getOrCreateTagBuilder(SALT)
                 .add(ModItems.SALT);
+
+        getOrCreateTagBuilder(SAUCES)
+                .add(ModItems.MAYONNAISE)
+                .add(ModItems.SWEET_SOUR_SAUCE)
+                .add(ModItems.KETCHUP);
     }
 }

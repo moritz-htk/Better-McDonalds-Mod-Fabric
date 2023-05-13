@@ -24,6 +24,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.CHEESE, Models.GENERATED);
         itemModelGenerator.register(ModItems.BEEF_PATTY, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOKED_BEEF_PATTY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MAYONNAISE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SWEET_SOUR_SAUCE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.KETCHUP, Models.GENERATED);
         itemModelGenerator.register(ModItems.KNIFE, Models.HANDHELD);
     }
 }

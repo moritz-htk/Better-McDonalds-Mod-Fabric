@@ -21,6 +21,15 @@ public class ModItems {
     public static final Item COOKED_BEEF_PATTY = registerItem("cooked_beef_patty",
             new Item(new FabricItemSettings()
                     .food(new FoodComponent.Builder().hunger(3).saturationModifier(6f).meat().build())));
+    public static final Item MAYONNAISE = registerItem("mayonnaise",
+            new Item(new FabricItemSettings()
+                    .food(new FoodComponent.Builder().hunger(1).saturationModifier(2f).build())));
+    public static final Item SWEET_SOUR_SAUCE = registerItem("sweet_sour_sauce",
+            new Item(new FabricItemSettings()
+                    .food(new FoodComponent.Builder().hunger(1).saturationModifier(2f).build())));
+    public static final Item KETCHUP = registerItem("ketchup",
+            new Item(new FabricItemSettings()
+                    .food(new FoodComponent.Builder().hunger(1).saturationModifier(2f).build())));
     public static final SwordItem KNIFE = registerSwordItem(
             new SwordItem(new ToolMaterial() {
                 @Override
@@ -82,6 +91,9 @@ public class ModItems {
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, CHEESE);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, BEEF_PATTY);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, COOKED_BEEF_PATTY);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, MAYONNAISE);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, SWEET_SOUR_SAUCE);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, KETCHUP);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, KNIFE);
     }
 
