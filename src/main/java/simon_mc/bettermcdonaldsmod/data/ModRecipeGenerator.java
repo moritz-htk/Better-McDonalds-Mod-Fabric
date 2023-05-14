@@ -143,6 +143,22 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.CHEESE), FabricRecipeProvider.conditionsFromItem(ModItems.CHEESE))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.FILET_O_FISH)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHICKEN_MCNUGGETS)
+                .input(ModItems.KNIFE)
+                .input(Items.COOKED_CHICKEN)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.KNIFE), FabricRecipeProvider.conditionsFromItem(ModItems.KNIFE))
+                .criterion(FabricRecipeProvider.hasItem(Items.COOKED_CHICKEN), FabricRecipeProvider.conditionsFromItem(Items.COOKED_CHICKEN))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.CHICKEN_MCNUGGETS)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.FRIES)
+                .input(ModItems.KNIFE)
+                .input(Items.BAKED_POTATO)
+                .input(ModItemTagProvider.SALT)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.KNIFE), FabricRecipeProvider.conditionsFromItem(ModItems.KNIFE))
+                .criterion(FabricRecipeProvider.hasItem(Items.BAKED_POTATO), FabricRecipeProvider.conditionsFromItem(Items.BAKED_POTATO))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.FRIES)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KNIFE)
                 .input('I', Items.IRON_INGOT)
                 .input('S', Items.STICK)

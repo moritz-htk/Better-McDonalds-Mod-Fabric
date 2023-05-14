@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "bettermcdonaldsmod:knife"
+    },
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "tag": "c:salt"
+    }
+  ],
+  "result": {
+    "item": "bettermcdonaldsmod:fries"
+  }
+}
