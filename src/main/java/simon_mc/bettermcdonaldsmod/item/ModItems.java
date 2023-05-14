@@ -2,12 +2,20 @@ package simon_mc.bettermcdonaldsmod.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.entity.ShulkerBoxBlockEntity;
+import net.minecraft.client.render.entity.animation.Animation;
+import net.minecraft.client.render.entity.animation.AnimationHelper;
+import net.minecraft.client.render.entity.feature.WardenFeatureRenderer;
+import net.minecraft.client.resource.metadata.AnimationResourceMetadata;
+import net.minecraft.client.resource.metadata.AnimationResourceMetadataReader;
+import net.minecraft.entity.AnimationState;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+import net.minecraft.util.UseAction;
 import simon_mc.bettermcdonaldsmod.BetterMcDonaldsMod;
 
 public class ModItems {
@@ -54,6 +62,38 @@ public class ModItems {
     public static final Item FRIES = registerItem("fries",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
                     .food(new FoodComponent.Builder().hunger(4).saturationModifier(6f).build())));
+    public static final Item COCA_COLA = registerItem("coca_cola",
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
+                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(4f).build())) {
+                @Override
+                public UseAction getUseAction(ItemStack stack) {
+                    return stack.getItem().isFood() ? UseAction.DRINK : UseAction.NONE;
+                }
+            });
+    public static final Item FANTA = registerItem("fanta",
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
+                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(4f).build())) {
+                @Override
+                public UseAction getUseAction(ItemStack stack) {
+                    return stack.getItem().isFood() ? UseAction.DRINK : UseAction.NONE;
+                }
+            });
+    public static final Item SPRITE = registerItem("sprite",
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
+                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(4f).build())) {
+                @Override
+                public UseAction getUseAction(ItemStack stack) {
+                    return stack.getItem().isFood() ? UseAction.DRINK : UseAction.NONE;
+                }
+            });
+    public static final Item LIPTON_ICE_TEA_PEACH = registerItem("lipton_ice_tea_peach",
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
+                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(4f).build())) {
+                @Override
+                public UseAction getUseAction(ItemStack stack) {
+                    return stack.getItem().isFood() ? UseAction.DRINK : UseAction.NONE;
+                }
+            });
     public static final SwordItem KNIFE = registerSwordItem(
             new SwordItem(new ToolMaterial() {
                 @Override
@@ -126,6 +166,10 @@ public class ModItems {
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, FILET_O_FISH);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, CHICKEN_MCNUGGETS);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, FRIES);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, COCA_COLA);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, FANTA);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, SPRITE);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, LIPTON_ICE_TEA_PEACH);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, KNIFE);
     }
 

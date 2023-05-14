@@ -159,6 +159,50 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.FRIES)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.COCA_COLA)
+                .input(Items.WATER_BUCKET)
+                .input(Items.SUGAR)
+                .input(ModItemTagProvider.SALT)
+                .input(Items.BROWN_DYE)
+                .criterion(FabricRecipeProvider.hasItem(Items.WATER_BUCKET), FabricRecipeProvider.conditionsFromItem(Items.WATER_BUCKET))
+                .criterion(FabricRecipeProvider.hasItem(Items.SUGAR), FabricRecipeProvider.conditionsFromItem(Items.SUGAR))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
+                .criterion(FabricRecipeProvider.hasItem(Items.BROWN_DYE), FabricRecipeProvider.conditionsFromItem(Items.BROWN_DYE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.COCA_COLA)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.FANTA)
+                .input(Items.WATER_BUCKET)
+                .input(Items.SUGAR)
+                .input(ModItemTagProvider.SALT)
+                .input(Items.YELLOW_DYE)
+                .criterion(FabricRecipeProvider.hasItem(Items.WATER_BUCKET), FabricRecipeProvider.conditionsFromItem(Items.WATER_BUCKET))
+                .criterion(FabricRecipeProvider.hasItem(Items.SUGAR), FabricRecipeProvider.conditionsFromItem(Items.SUGAR))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
+                .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_DYE), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_DYE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.FANTA)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SPRITE)
+                .input(Items.WATER_BUCKET)
+                .input(Items.SUGAR)
+                .input(ModItemTagProvider.SALT)
+                .input(Items.GREEN_DYE)
+                .criterion(FabricRecipeProvider.hasItem(Items.WATER_BUCKET), FabricRecipeProvider.conditionsFromItem(Items.WATER_BUCKET))
+                .criterion(FabricRecipeProvider.hasItem(Items.SUGAR), FabricRecipeProvider.conditionsFromItem(Items.SUGAR))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
+                .criterion(FabricRecipeProvider.hasItem(Items.GREEN_DYE), FabricRecipeProvider.conditionsFromItem(Items.GREEN_DYE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.SPRITE)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.LIPTON_ICE_TEA_PEACH)
+                .input(Items.WATER_BUCKET)
+                .input(Items.SUGAR)
+                .input(ModItemTagProvider.SALT)
+                .input(Items.PINK_DYE)
+                .criterion(FabricRecipeProvider.hasItem(Items.WATER_BUCKET), FabricRecipeProvider.conditionsFromItem(Items.WATER_BUCKET))
+                .criterion(FabricRecipeProvider.hasItem(Items.SUGAR), FabricRecipeProvider.conditionsFromItem(Items.SUGAR))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
+                .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.LIPTON_ICE_TEA_PEACH)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KNIFE)
                 .input('I', Items.IRON_INGOT)
                 .input('S', Items.STICK)

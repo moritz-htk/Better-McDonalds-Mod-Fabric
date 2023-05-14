@@ -16,6 +16,7 @@ import java.util.concurrent.CompletableFuture;
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> SALT = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "salt"));
     public static final TagKey<Item> BURGERS = TagKey.of(Registries.ITEM.getKey(), new Identifier(BetterMcDonaldsMod.MOD_ID, "burgers"));
+    public static final TagKey<Item> DRINKS = TagKey.of(Registries.ITEM.getKey(), new Identifier(BetterMcDonaldsMod.MOD_ID, "drinks"));
     public static final TagKey<Item> SIDE_DISHES = TagKey.of(Registries.ITEM.getKey(), new Identifier(BetterMcDonaldsMod.MOD_ID, "side_dishes"));
     public static final TagKey<Item> SAUCES = TagKey.of(Registries.ITEM.getKey(), new Identifier(BetterMcDonaldsMod.MOD_ID, "sauces"));
 
@@ -35,6 +36,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.CHICKENBURGER)
                 .add(ModItems.MCCHICKEN)
                 .add(ModItems.FILET_O_FISH);
+
+        getOrCreateTagBuilder(DRINKS)
+                .add(ModItems.COCA_COLA)
+                .add(ModItems.FANTA)
+                .add(ModItems.SPRITE)
+                .add(ModItems.LIPTON_ICE_TEA_PEACH);
 
         getOrCreateTagBuilder(SIDE_DISHES)
                 .add(ModItems.CHICKEN_MCNUGGETS)
