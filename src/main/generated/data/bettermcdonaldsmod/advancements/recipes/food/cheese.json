@@ -1,13 +1,23 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_salt": {
+    "has_milk_bucket": {
       "conditions": {
         "items": [
           {
             "items": [
-              "bettermcdonaldsmod:salt"
+              "minecraft:milk_bucket"
             ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_salt": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "c:salt"
           }
         ]
       },
@@ -15,20 +25,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cheese"
+        "recipe": "bettermcdonaldsmod:cheese"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
+      "has_milk_bucket",
       "has_salt",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cheese"
+      "bettermcdonaldsmod:cheese"
     ]
   }
 }

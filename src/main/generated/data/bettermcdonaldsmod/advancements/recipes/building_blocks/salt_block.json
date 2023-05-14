@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "bettermcdonaldsmod:salt"
-            ]
+            "tag": "c:salt"
           }
         ]
       },
@@ -15,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:salt_block"
+        "recipe": "bettermcdonaldsmod:salt_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:salt_block"
+      "bettermcdonaldsmod:salt_block"
     ]
   }
 }
