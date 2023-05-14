@@ -159,6 +159,17 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.FRIES)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.HAPPY_MEAL)
+                .input(ModItemTagProvider.BURGERS)
+                .input(ModItemTagProvider.DRINKS)
+                .input(ModItemTagProvider.SIDE_DISHES)
+                .input(Items.APPLE)
+                .criterion("has_burger", FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.BURGERS))
+                .criterion("has_drink", FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.DRINKS))
+                .criterion("has_side_dish", FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SIDE_DISHES))
+                .criterion(FabricRecipeProvider.hasItem(Items.APPLE), FabricRecipeProvider.conditionsFromItem(Items.APPLE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.HAPPY_MEAL)));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.COCA_COLA)
                 .input(Items.WATER_BUCKET)
                 .input(Items.SUGAR)
@@ -202,6 +213,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
                 .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.LIPTON_ICE_TEA_PEACH)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MCFLURRY)
+                .input(Items.MILK_BUCKET)
+                .input(Items.SNOWBALL)
+                .input(Items.SUGAR)
+                .criterion(FabricRecipeProvider.hasItem(Items.MILK_BUCKET), FabricRecipeProvider.conditionsFromItem(Items.MILK_BUCKET))
+                .criterion(FabricRecipeProvider.hasItem(Items.SNOWBALL), FabricRecipeProvider.conditionsFromItem(Items.SNOWBALL))
+                .criterion(FabricRecipeProvider.hasItem(Items.SUGAR), FabricRecipeProvider.conditionsFromItem(Items.SUGAR))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.MCFLURRY)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KNIFE)
                 .input('I', Items.IRON_INGOT)

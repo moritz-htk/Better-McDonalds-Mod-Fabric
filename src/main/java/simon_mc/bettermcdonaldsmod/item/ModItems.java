@@ -62,6 +62,9 @@ public class ModItems {
     public static final Item FRIES = registerItem("fries",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
                     .food(new FoodComponent.Builder().hunger(4).saturationModifier(6f).build())));
+    public static final Item HAPPY_MEAL = registerItem("happy_meal",
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.UNCOMMON)
+                    .food(new FoodComponent.Builder().hunger(20).saturationModifier(30f).build())));
     public static final Item COCA_COLA = registerItem("coca_cola",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
                     .food(new FoodComponent.Builder().hunger(3).saturationModifier(4f).build())) {
@@ -94,6 +97,9 @@ public class ModItems {
                     return stack.getItem().isFood() ? UseAction.DRINK : UseAction.NONE;
                 }
             });
+    public static final Item MCFLURRY = registerItem("mcflurry",
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
+                    .food(new FoodComponent.Builder().hunger(5).saturationModifier(0.3f).build())));
     public static final SwordItem KNIFE = registerSwordItem(
             new SwordItem(new ToolMaterial() {
                 @Override
@@ -166,10 +172,12 @@ public class ModItems {
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, FILET_O_FISH);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, CHICKEN_MCNUGGETS);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, FRIES);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, HAPPY_MEAL);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, COCA_COLA);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, FANTA);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, SPRITE);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, LIPTON_ICE_TEA_PEACH);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, MCFLURRY);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, KNIFE);
     }
 

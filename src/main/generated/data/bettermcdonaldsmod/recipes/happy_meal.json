@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "bettermcdonaldsmod:burgers"
+    },
+    {
+      "tag": "bettermcdonaldsmod:drinks"
+    },
+    {
+      "tag": "bettermcdonaldsmod:side_dishes"
+    },
+    {
+      "item": "minecraft:apple"
+    }
+  ],
+  "result": {
+    "item": "bettermcdonaldsmod:happy_meal"
+  }
+}
