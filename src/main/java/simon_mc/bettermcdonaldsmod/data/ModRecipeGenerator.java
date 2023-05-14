@@ -85,6 +85,33 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.RED_DYE), FabricRecipeProvider.conditionsFromItem(Items.RED_DYE))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.KETCHUP)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.HAMBURGER)
+                .input(Items.BREAD)
+                .input(ModItems.COOKED_BEEF_PATTY)
+                .criterion(FabricRecipeProvider.hasItem(Items.BREAD), FabricRecipeProvider.conditionsFromItem(Items.BREAD))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.COOKED_BEEF_PATTY), FabricRecipeProvider.conditionsFromItem(ModItems.COOKED_BEEF_PATTY))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.HAMBURGER)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHEESEBURGER)
+                .input(Items.BREAD)
+                .input(ModItems.COOKED_BEEF_PATTY)
+                .input(ModItems.CHEESE)
+                .criterion(FabricRecipeProvider.hasItem(Items.BREAD), FabricRecipeProvider.conditionsFromItem(Items.BREAD))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.COOKED_BEEF_PATTY), FabricRecipeProvider.conditionsFromItem(ModItems.COOKED_BEEF_PATTY))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.CHEESE), FabricRecipeProvider.conditionsFromItem(ModItems.CHEESE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.CHEESEBURGER)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BIG_MAC)
+                .input(Items.BREAD)
+                .input(ModItems.COOKED_BEEF_PATTY, 2)
+                .input(ModItems.CHEESE)
+                .input(Items.GRASS)
+                .criterion(FabricRecipeProvider.hasItem(Items.BREAD), FabricRecipeProvider.conditionsFromItem(Items.BREAD))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.COOKED_BEEF_PATTY), FabricRecipeProvider.conditionsFromItem(ModItems.COOKED_BEEF_PATTY))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.CHEESE), FabricRecipeProvider.conditionsFromItem(ModItems.CHEESE))
+                .criterion(FabricRecipeProvider.hasItem(Items.GRASS), FabricRecipeProvider.conditionsFromItem(Items.GRASS))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.BIG_MAC)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KNIFE)
                 .input('I', Items.IRON_INGOT)
                 .input('S', Items.STICK)
