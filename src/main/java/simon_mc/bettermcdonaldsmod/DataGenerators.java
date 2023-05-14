@@ -15,10 +15,10 @@ public class DataGenerators implements DataGeneratorEntrypoint {
 		ModBlockTagProvider blockTagProvider = pack.addProvider(ModBlockTagProvider::new);
 
 		pack.addProvider((output, completableFuture) -> new ModItemTagProvider(output, completableFuture, blockTagProvider));
-		pack.addProvider(ModLootTableGenerator::new);
+		pack.addProvider(ModLootTableProvider::new);
 		pack.addProvider(ModModelProvider::new);
-		pack.addProvider(ModRecipeGenerator::new);
-		pack.addProvider(ModWorldGenerator::new);
+		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModWorldGenProvider::new);
 	}
 
 	@Override

@@ -13,6 +13,6 @@ public class ModItemGroup {
     public static void registerItemGroups() {
         BETTER_MCDONALDS_MOD_TAB = FabricItemGroup.builder(new Identifier(BetterMcDonaldsMod.MOD_ID, "bettermcdonaldsmod"))
                 .displayName(Text.translatable("itemgroup.bettermcdonaldsmod"))
-                .icon(() -> new ItemStack(ModItems.SALT)).build();
+                .icon(() -> new ItemStack(ModItems.HAPPY_MEAL)).build();
     }
 }

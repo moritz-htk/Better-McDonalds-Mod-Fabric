@@ -8,8 +8,8 @@ import simon_mc.bettermcdonaldsmod.BetterMcDonaldsMod;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModWorldGenerator extends FabricDynamicRegistryProvider {
-    public ModWorldGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+public class ModWorldGenProvider extends FabricDynamicRegistryProvider {
+    public ModWorldGenProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
 

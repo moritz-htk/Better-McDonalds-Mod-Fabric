@@ -16,8 +16,8 @@ import simon_mc.bettermcdonaldsmod.item.ModItems;
 
 import java.util.function.Consumer;
 
-public class ModRecipeGenerator extends FabricRecipeProvider {
-    public ModRecipeGenerator(FabricDataOutput output) {
+public class ModRecipeProvider extends FabricRecipeProvider {
+    public ModRecipeProvider(FabricDataOutput output) {
         super(output);
     }
 
