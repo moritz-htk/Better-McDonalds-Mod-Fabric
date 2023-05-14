@@ -39,6 +39,15 @@ public class ModItems {
     public static final Item BIG_MAC = registerItem("big_mac",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
                     .food(new FoodComponent.Builder().hunger(14).saturationModifier(18f).build())));
+    public static final Item CHICKENBURGER = registerItem("chickenburger",
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
+                    .food(new FoodComponent.Builder().hunger(12).saturationModifier(15f).build())));
+    public static final Item MCCHICKEN = registerItem("mcchicken",
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
+                    .food(new FoodComponent.Builder().hunger(13).saturationModifier(17f).build())));
+    public static final Item FILET_O_FISH = registerItem("filet_o_fish",
+            new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
+                    .food(new FoodComponent.Builder().hunger(11).saturationModifier(15f).build())));
     public static final SwordItem KNIFE = registerSwordItem(
             new SwordItem(new ToolMaterial() {
                 @Override
@@ -106,6 +115,9 @@ public class ModItems {
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, HAMBURGER);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, CHEESEBURGER);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, BIG_MAC);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, CHICKENBURGER);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, MCCHICKEN);
+        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, FILET_O_FISH);
         addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, KNIFE);
     }
 
