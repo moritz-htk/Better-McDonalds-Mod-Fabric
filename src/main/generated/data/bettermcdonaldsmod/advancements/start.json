@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "start": {
+    "tick": {
       "conditions": {},
       "trigger": "minecraft:tick"
     }
@@ -23,7 +23,7 @@
   },
   "requirements": [
     [
-      "start"
+      "tick"
     ]
   ]
 }

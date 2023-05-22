@@ -23,8 +23,12 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
     @Override
     public void generateAdvancement(Consumer<Advancement> consumer) {
         Advancement START = Advancement.Builder.create()
-                .display(makeRootDisplay(AdvancementFrame.TASK, ModItems.HAPPY_MEAL, "start"))
-                .criterion("start", TickCriterion.Conditions.createTick())
+                .display(ModItems.HAPPY_MEAL,
+                        Text.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".start.title"),
+                        Text.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".start.description"),
+                        new Identifier(BetterMcDonaldsMod.MOD_ID, "textures/screens/advancement_tab.png"),
+                        AdvancementFrame.TASK, false, false, false)
+                .criterion("tick", TickCriterion.Conditions.createTick())
                 .build(consumer, BetterMcDonaldsMod.MOD_ID + ":start");
 
         Advancement GET_SALT = Advancement.Builder.create()
@@ -40,7 +44,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .build(consumer, BetterMcDonaldsMod.MOD_ID + ":craft_knife");
 
         Advancement.Builder.create()
-                .display(makeNormalDisplay(AdvancementFrame.GOAL, ModItems.BIG_MAC, "craft_burger"))
+                .display(makeNormalDisplay(AdvancementFrame.GOAL, ModItems.HAMBURGER, "craft_burger"))
                 .criterion("inventory_changed", InventoryChangedCriterion.Conditions.items(ModItems.HAMBURGER))
                 .parent(CRAFT_KNIFE)
                 .build(consumer, BetterMcDonaldsMod.MOD_ID + ":craft_burger");
@@ -50,14 +54,6 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .criterion("inventory_changed", InventoryChangedCriterion.Conditions.items(ModItems.COCA_COLA))
                 .parent(GET_SALT)
                 .build(consumer, BetterMcDonaldsMod.MOD_ID + ":craft_drink");
-    }
-
-    public static AdvancementDisplay makeRootDisplay(AdvancementFrame frame, ItemConvertible item, String titleKey) {
-        return new AdvancementDisplay(item.asItem().getDefaultStack(),
-                Text.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + "." + titleKey + ".title"),
-                Text.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + "." + titleKey + ".description"),
-                new Identifier(BetterMcDonaldsMod.MOD_ID, "textures/screens/advancement_tab.png"),
-                frame, false, false, false);
     }
 
     public static AdvancementDisplay makeNormalDisplay(AdvancementFrame frame, ItemConvertible item, String titleKey) {

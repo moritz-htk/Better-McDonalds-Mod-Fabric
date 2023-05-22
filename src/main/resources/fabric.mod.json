@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "bettermcdonaldsmod",
-	"version": "${version}",
+	"version": "1.19.4-3.0",
 	"name": "Better McDonalds Mod",
 	"description": "Many well-known McDonalds products have been added.",
 	"authors": [
@@ -31,7 +31,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.14.19",
-		"minecraft": "~1.19.3",
+		"minecraft": "~1.19.4",
 		"java": ">=17",
 		"fabric-api": "*"
 	},

@@ -27,39 +27,39 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('#', ModItemTagProvider.SALT)
                 .pattern("##")
                 .pattern("##")
-                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModBlocks.SALT_BLOCK)));
+                .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModBlocks.SALT_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHEESE)
                 .input(Items.MILK_BUCKET)
                 .input(ModItemTagProvider.SALT)
-                .criterion(FabricRecipeProvider.hasItem(Items.MILK_BUCKET), FabricRecipeProvider.conditionsFromItem(Items.MILK_BUCKET))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.CHEESE)));
+                .criterion(hasItem(Items.MILK_BUCKET), conditionsFromItem(Items.MILK_BUCKET))
+                .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.CHEESE)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BEEF_PATTY, 2)
                 .input(ModItems.KNIFE)
                 .input(Items.BEEF)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.KNIFE), FabricRecipeProvider.conditionsFromItem(ModItems.KNIFE))
-                .criterion(FabricRecipeProvider.hasItem(Items.BEEF), FabricRecipeProvider.conditionsFromItem(Items.BEEF))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.BEEF_PATTY)));
+                .criterion(hasItem(ModItems.KNIFE), conditionsFromItem(ModItems.KNIFE))
+                .criterion(hasItem(Items.BEEF), conditionsFromItem(Items.BEEF))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.BEEF_PATTY)));
 
         CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(ModItems.BEEF_PATTY), RecipeCategory.FOOD, ModItems.COOKED_BEEF_PATTY, 1.0f, 200)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.BEEF_PATTY), FabricRecipeProvider.conditionsFromItem(ModItems.BEEF_PATTY))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.COOKED_BEEF_PATTY) + "_smelting"));
+                .criterion(hasItem(ModItems.BEEF_PATTY), conditionsFromItem(ModItems.BEEF_PATTY))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.COOKED_BEEF_PATTY) + "_smelting"));
 
         CookingRecipeJsonBuilder.createSmoking(Ingredient.ofItems(ModItems.BEEF_PATTY), RecipeCategory.FOOD, ModItems.COOKED_BEEF_PATTY, 1.0f, 100)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.BEEF_PATTY), FabricRecipeProvider.conditionsFromItem(ModItems.BEEF_PATTY))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.COOKED_BEEF_PATTY) + "_smoking"));
+                .criterion(hasItem(ModItems.BEEF_PATTY), conditionsFromItem(ModItems.BEEF_PATTY))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.COOKED_BEEF_PATTY) + "_smoking"));
 
         CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.ofItems(ModItems.BEEF_PATTY), RecipeCategory.FOOD, ModItems.COOKED_BEEF_PATTY, 1.0f, 600)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.BEEF_PATTY), FabricRecipeProvider.conditionsFromItem(ModItems.BEEF_PATTY))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.COOKED_BEEF_PATTY) + "_campfire_cooking"));
+                .criterion(hasItem(ModItems.BEEF_PATTY), conditionsFromItem(ModItems.BEEF_PATTY))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.COOKED_BEEF_PATTY) + "_campfire_cooking"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MAYONNAISE)
                 .input(Items.EGG)
-                .criterion(FabricRecipeProvider.hasItem(Items.EGG), FabricRecipeProvider.conditionsFromItem(Items.EGG))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.MAYONNAISE)));
+                .criterion(hasItem(Items.EGG), conditionsFromItem(Items.EGG))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.MAYONNAISE)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SWEET_SOUR_SAUCE)
                 .input(Items.WATER_BUCKET)
@@ -67,169 +67,169 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItemTagProvider.SALT)
                 .input(Items.WHEAT)
                 .input(Items.ORANGE_DYE)
-                .criterion(FabricRecipeProvider.hasItem(Items.WATER_BUCKET), FabricRecipeProvider.conditionsFromItem(Items.WATER_BUCKET))
-                .criterion(FabricRecipeProvider.hasItem(Items.SUGAR), FabricRecipeProvider.conditionsFromItem(Items.SUGAR))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
-                .criterion(FabricRecipeProvider.hasItem(Items.WHEAT), FabricRecipeProvider.conditionsFromItem(Items.WHEAT))
-                .criterion(FabricRecipeProvider.hasItem(Items.ORANGE_DYE), FabricRecipeProvider.conditionsFromItem(Items.ORANGE_DYE))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.SWEET_SOUR_SAUCE)));
+                .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
+                .criterion(hasItem(Items.WHEAT), conditionsFromItem(Items.WHEAT))
+                .criterion(hasItem(Items.ORANGE_DYE), conditionsFromItem(Items.ORANGE_DYE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.SWEET_SOUR_SAUCE)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.KETCHUP)
                 .input(Items.WATER_BUCKET)
                 .input(Items.SUGAR)
                 .input(ModItemTagProvider.SALT)
                 .input(Items.RED_DYE)
-                .criterion(FabricRecipeProvider.hasItem(Items.WATER_BUCKET), FabricRecipeProvider.conditionsFromItem(Items.WATER_BUCKET))
-                .criterion(FabricRecipeProvider.hasItem(Items.SUGAR), FabricRecipeProvider.conditionsFromItem(Items.SUGAR))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
-                .criterion(FabricRecipeProvider.hasItem(Items.RED_DYE), FabricRecipeProvider.conditionsFromItem(Items.RED_DYE))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.KETCHUP)));
+                .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
+                .criterion(hasItem(Items.RED_DYE), conditionsFromItem(Items.RED_DYE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.KETCHUP)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.HAMBURGER)
                 .input(Items.BREAD)
                 .input(ModItems.COOKED_BEEF_PATTY)
-                .criterion(FabricRecipeProvider.hasItem(Items.BREAD), FabricRecipeProvider.conditionsFromItem(Items.BREAD))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.COOKED_BEEF_PATTY), FabricRecipeProvider.conditionsFromItem(ModItems.COOKED_BEEF_PATTY))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.HAMBURGER)));
+                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
+                .criterion(hasItem(ModItems.COOKED_BEEF_PATTY), conditionsFromItem(ModItems.COOKED_BEEF_PATTY))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.HAMBURGER)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHEESEBURGER)
                 .input(Items.BREAD)
                 .input(ModItems.COOKED_BEEF_PATTY)
                 .input(ModItems.CHEESE)
-                .criterion(FabricRecipeProvider.hasItem(Items.BREAD), FabricRecipeProvider.conditionsFromItem(Items.BREAD))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.COOKED_BEEF_PATTY), FabricRecipeProvider.conditionsFromItem(ModItems.COOKED_BEEF_PATTY))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.CHEESE), FabricRecipeProvider.conditionsFromItem(ModItems.CHEESE))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.CHEESEBURGER)));
+                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
+                .criterion(hasItem(ModItems.COOKED_BEEF_PATTY), conditionsFromItem(ModItems.COOKED_BEEF_PATTY))
+                .criterion(hasItem(ModItems.CHEESE), conditionsFromItem(ModItems.CHEESE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.CHEESEBURGER)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BIG_MAC)
                 .input(Items.BREAD)
                 .input(ModItems.COOKED_BEEF_PATTY, 2)
                 .input(ModItems.CHEESE)
                 .input(Items.GRASS)
-                .criterion(FabricRecipeProvider.hasItem(Items.BREAD), FabricRecipeProvider.conditionsFromItem(Items.BREAD))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.COOKED_BEEF_PATTY), FabricRecipeProvider.conditionsFromItem(ModItems.COOKED_BEEF_PATTY))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.CHEESE), FabricRecipeProvider.conditionsFromItem(ModItems.CHEESE))
-                .criterion(FabricRecipeProvider.hasItem(Items.GRASS), FabricRecipeProvider.conditionsFromItem(Items.GRASS))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.BIG_MAC)));
+                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
+                .criterion(hasItem(ModItems.COOKED_BEEF_PATTY), conditionsFromItem(ModItems.COOKED_BEEF_PATTY))
+                .criterion(hasItem(ModItems.CHEESE), conditionsFromItem(ModItems.CHEESE))
+                .criterion(hasItem(Items.GRASS), conditionsFromItem(Items.GRASS))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.BIG_MAC)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHICKENBURGER)
                 .input(Items.BREAD)
                 .input(Items.COOKED_CHICKEN)
                 .input(ModItems.KETCHUP)
                 .input(Items.GRASS)
-                .criterion(FabricRecipeProvider.hasItem(Items.BREAD), FabricRecipeProvider.conditionsFromItem(Items.BREAD))
-                .criterion(FabricRecipeProvider.hasItem(Items.COOKED_CHICKEN), FabricRecipeProvider.conditionsFromItem(Items.COOKED_CHICKEN))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.KETCHUP), FabricRecipeProvider.conditionsFromItem(ModItems.KETCHUP))
-                .criterion(FabricRecipeProvider.hasItem(Items.GRASS), FabricRecipeProvider.conditionsFromItem(Items.GRASS))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.CHICKENBURGER)));
+                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
+                .criterion(hasItem(Items.COOKED_CHICKEN), conditionsFromItem(Items.COOKED_CHICKEN))
+                .criterion(hasItem(ModItems.KETCHUP), conditionsFromItem(ModItems.KETCHUP))
+                .criterion(hasItem(Items.GRASS), conditionsFromItem(Items.GRASS))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.CHICKENBURGER)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MCCHICKEN)
                 .input(Items.BREAD)
                 .input(Items.COOKED_CHICKEN)
                 .input(ModItems.MAYONNAISE)
                 .input(Items.GRASS)
-                .criterion(FabricRecipeProvider.hasItem(Items.BREAD), FabricRecipeProvider.conditionsFromItem(Items.BREAD))
-                .criterion(FabricRecipeProvider.hasItem(Items.COOKED_CHICKEN), FabricRecipeProvider.conditionsFromItem(Items.COOKED_CHICKEN))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.MAYONNAISE), FabricRecipeProvider.conditionsFromItem(ModItems.MAYONNAISE))
-                .criterion(FabricRecipeProvider.hasItem(Items.GRASS), FabricRecipeProvider.conditionsFromItem(Items.GRASS))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.MCCHICKEN)));
+                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
+                .criterion(hasItem(Items.COOKED_CHICKEN), conditionsFromItem(Items.COOKED_CHICKEN))
+                .criterion(hasItem(ModItems.MAYONNAISE), conditionsFromItem(ModItems.MAYONNAISE))
+                .criterion(hasItem(Items.GRASS), conditionsFromItem(Items.GRASS))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.MCCHICKEN)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.FILET_O_FISH)
                 .input(Items.BREAD)
                 .input(Items.COOKED_SALMON)
                 .input(ModItems.CHEESE)
-                .criterion(FabricRecipeProvider.hasItem(Items.BREAD), FabricRecipeProvider.conditionsFromItem(Items.BREAD))
-                .criterion(FabricRecipeProvider.hasItem(Items.COOKED_SALMON), FabricRecipeProvider.conditionsFromItem(Items.COOKED_SALMON))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.CHEESE), FabricRecipeProvider.conditionsFromItem(ModItems.CHEESE))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.FILET_O_FISH)));
+                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
+                .criterion(hasItem(Items.COOKED_SALMON), conditionsFromItem(Items.COOKED_SALMON))
+                .criterion(hasItem(ModItems.CHEESE), conditionsFromItem(ModItems.CHEESE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.FILET_O_FISH)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHICKEN_MCNUGGETS)
                 .input(ModItems.KNIFE)
                 .input(Items.COOKED_CHICKEN)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.KNIFE), FabricRecipeProvider.conditionsFromItem(ModItems.KNIFE))
-                .criterion(FabricRecipeProvider.hasItem(Items.COOKED_CHICKEN), FabricRecipeProvider.conditionsFromItem(Items.COOKED_CHICKEN))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.CHICKEN_MCNUGGETS)));
+                .criterion(hasItem(ModItems.KNIFE), conditionsFromItem(ModItems.KNIFE))
+                .criterion(hasItem(Items.COOKED_CHICKEN), conditionsFromItem(Items.COOKED_CHICKEN))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.CHICKEN_MCNUGGETS)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.FRIES)
                 .input(ModItems.KNIFE)
                 .input(Items.BAKED_POTATO)
                 .input(ModItemTagProvider.SALT)
-                .criterion(FabricRecipeProvider.hasItem(ModItems.KNIFE), FabricRecipeProvider.conditionsFromItem(ModItems.KNIFE))
-                .criterion(FabricRecipeProvider.hasItem(Items.BAKED_POTATO), FabricRecipeProvider.conditionsFromItem(Items.BAKED_POTATO))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.FRIES)));
+                .criterion(hasItem(ModItems.KNIFE), conditionsFromItem(ModItems.KNIFE))
+                .criterion(hasItem(Items.BAKED_POTATO), conditionsFromItem(Items.BAKED_POTATO))
+                .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.FRIES)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.HAPPY_MEAL)
                 .input(ModItemTagProvider.BURGERS)
                 .input(ModItemTagProvider.DRINKS)
                 .input(ModItemTagProvider.SIDE_DISHES)
                 .input(Items.APPLE)
-                .criterion("has_burger", FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.BURGERS))
-                .criterion("has_drink", FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.DRINKS))
-                .criterion("has_side_dish", FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SIDE_DISHES))
-                .criterion(FabricRecipeProvider.hasItem(Items.APPLE), FabricRecipeProvider.conditionsFromItem(Items.APPLE))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.HAPPY_MEAL)));
+                .criterion("has_burger", conditionsFromTag(ModItemTagProvider.BURGERS))
+                .criterion("has_drink", conditionsFromTag(ModItemTagProvider.DRINKS))
+                .criterion("has_side_dish", conditionsFromTag(ModItemTagProvider.SIDE_DISHES))
+                .criterion(hasItem(Items.APPLE), conditionsFromItem(Items.APPLE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.HAPPY_MEAL)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.COCA_COLA)
                 .input(Items.WATER_BUCKET)
                 .input(Items.SUGAR)
                 .input(ModItemTagProvider.SALT)
                 .input(Items.BROWN_DYE)
-                .criterion(FabricRecipeProvider.hasItem(Items.WATER_BUCKET), FabricRecipeProvider.conditionsFromItem(Items.WATER_BUCKET))
-                .criterion(FabricRecipeProvider.hasItem(Items.SUGAR), FabricRecipeProvider.conditionsFromItem(Items.SUGAR))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
-                .criterion(FabricRecipeProvider.hasItem(Items.BROWN_DYE), FabricRecipeProvider.conditionsFromItem(Items.BROWN_DYE))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.COCA_COLA)));
+                .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
+                .criterion(hasItem(Items.BROWN_DYE), conditionsFromItem(Items.BROWN_DYE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.COCA_COLA)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.FANTA)
                 .input(Items.WATER_BUCKET)
                 .input(Items.SUGAR)
                 .input(ModItemTagProvider.SALT)
                 .input(Items.YELLOW_DYE)
-                .criterion(FabricRecipeProvider.hasItem(Items.WATER_BUCKET), FabricRecipeProvider.conditionsFromItem(Items.WATER_BUCKET))
-                .criterion(FabricRecipeProvider.hasItem(Items.SUGAR), FabricRecipeProvider.conditionsFromItem(Items.SUGAR))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
-                .criterion(FabricRecipeProvider.hasItem(Items.YELLOW_DYE), FabricRecipeProvider.conditionsFromItem(Items.YELLOW_DYE))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.FANTA)));
+                .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
+                .criterion(hasItem(Items.YELLOW_DYE), conditionsFromItem(Items.YELLOW_DYE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.FANTA)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SPRITE)
                 .input(Items.WATER_BUCKET)
                 .input(Items.SUGAR)
                 .input(ModItemTagProvider.SALT)
                 .input(Items.GREEN_DYE)
-                .criterion(FabricRecipeProvider.hasItem(Items.WATER_BUCKET), FabricRecipeProvider.conditionsFromItem(Items.WATER_BUCKET))
-                .criterion(FabricRecipeProvider.hasItem(Items.SUGAR), FabricRecipeProvider.conditionsFromItem(Items.SUGAR))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
-                .criterion(FabricRecipeProvider.hasItem(Items.GREEN_DYE), FabricRecipeProvider.conditionsFromItem(Items.GREEN_DYE))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.SPRITE)));
+                .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
+                .criterion(hasItem(Items.GREEN_DYE), conditionsFromItem(Items.GREEN_DYE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.SPRITE)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.LIPTON_ICE_TEA_PEACH)
                 .input(Items.WATER_BUCKET)
                 .input(Items.SUGAR)
                 .input(ModItemTagProvider.SALT)
                 .input(Items.PINK_DYE)
-                .criterion(FabricRecipeProvider.hasItem(Items.WATER_BUCKET), FabricRecipeProvider.conditionsFromItem(Items.WATER_BUCKET))
-                .criterion(FabricRecipeProvider.hasItem(Items.SUGAR), FabricRecipeProvider.conditionsFromItem(Items.SUGAR))
-                .criterion(FabricRecipeProvider.hasItem(ModItems.SALT), FabricRecipeProvider.conditionsFromTag(ModItemTagProvider.SALT))
-                .criterion(FabricRecipeProvider.hasItem(Items.PINK_DYE), FabricRecipeProvider.conditionsFromItem(Items.PINK_DYE))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.LIPTON_ICE_TEA_PEACH)));
+                .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
+                .criterion(hasItem(Items.PINK_DYE), conditionsFromItem(Items.PINK_DYE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.LIPTON_ICE_TEA_PEACH)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MCFLURRY)
                 .input(Items.MILK_BUCKET)
                 .input(Items.SNOWBALL)
                 .input(Items.SUGAR)
-                .criterion(FabricRecipeProvider.hasItem(Items.MILK_BUCKET), FabricRecipeProvider.conditionsFromItem(Items.MILK_BUCKET))
-                .criterion(FabricRecipeProvider.hasItem(Items.SNOWBALL), FabricRecipeProvider.conditionsFromItem(Items.SNOWBALL))
-                .criterion(FabricRecipeProvider.hasItem(Items.SUGAR), FabricRecipeProvider.conditionsFromItem(Items.SUGAR))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.MCFLURRY)));
+                .criterion(hasItem(Items.MILK_BUCKET), conditionsFromItem(Items.MILK_BUCKET))
+                .criterion(hasItem(Items.SNOWBALL), conditionsFromItem(Items.SNOWBALL))
+                .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.MCFLURRY)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KNIFE)
                 .input('I', Items.IRON_INGOT)
                 .input('S', Items.STICK)
                 .pattern(" I ")
                 .pattern(" S ")
-                .criterion(FabricRecipeProvider.hasItem(Items.IRON_INGOT), FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
-                .criterion(FabricRecipeProvider.hasItem(Items.STICK), FabricRecipeProvider.conditionsFromItem(Items.STICK))
-                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, FabricRecipeProvider.getRecipeName(ModItems.KNIFE)));
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.KNIFE)));
     }
 }

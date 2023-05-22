@@ -2,13 +2,6 @@ package simon_mc.bettermcdonaldsmod.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.entity.ShulkerBoxBlockEntity;
-import net.minecraft.client.render.entity.animation.Animation;
-import net.minecraft.client.render.entity.animation.AnimationHelper;
-import net.minecraft.client.render.entity.feature.WardenFeatureRenderer;
-import net.minecraft.client.resource.metadata.AnimationResourceMetadata;
-import net.minecraft.client.resource.metadata.AnimationResourceMetadataReader;
-import net.minecraft.entity.AnimationState;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
