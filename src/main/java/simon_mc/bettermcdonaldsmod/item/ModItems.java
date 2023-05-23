@@ -21,46 +21,46 @@ public class ModItems {
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(1f).meat().build())));
     public static final Item COOKED_BEEF_PATTY = registerItem("cooked_beef_patty",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(6f).meat().build())));
+                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(1.5f).meat().build())));
     public static final Item MAYONNAISE = registerItem("mayonnaise",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(1).saturationModifier(2f).build())));
+                    .food(new FoodComponent.Builder().hunger(1).saturationModifier(0.5f).build())));
     public static final Item SWEET_SOUR_SAUCE = registerItem("sweet_sour_sauce",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(1).saturationModifier(2f).build())));
+                    .food(new FoodComponent.Builder().hunger(1).saturationModifier(0.5f).build())));
     public static final Item KETCHUP = registerItem("ketchup",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(1).saturationModifier(2f).build())));
+                    .food(new FoodComponent.Builder().hunger(1).saturationModifier(0.5f).build())));
     public static final Item HAMBURGER = registerItem("hamburger",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(9).saturationModifier(12f).build())));
+                    .food(new FoodComponent.Builder().hunger(9).saturationModifier(4.5f).build())));
     public static final Item CHEESEBURGER = registerItem("cheeseburger",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(10).saturationModifier(14f).build())));
+                    .food(new FoodComponent.Builder().hunger(10).saturationModifier(5f).build())));
     public static final Item BIG_MAC = registerItem("big_mac",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(14).saturationModifier(18f).build())));
+                    .food(new FoodComponent.Builder().hunger(14).saturationModifier(7f).build())));
     public static final Item CHICKENBURGER = registerItem("chickenburger",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(12).saturationModifier(15f).build())));
+                    .food(new FoodComponent.Builder().hunger(12).saturationModifier(6f).build())));
     public static final Item MCCHICKEN = registerItem("mcchicken",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(13).saturationModifier(17f).build())));
+                    .food(new FoodComponent.Builder().hunger(13).saturationModifier(6.5f).build())));
     public static final Item FILET_O_FISH = registerItem("filet_o_fish",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(11).saturationModifier(15f).build())));
+                    .food(new FoodComponent.Builder().hunger(11).saturationModifier(5.5f).build())));
     public static final Item CHICKEN_MCNUGGETS = registerItem("chicken_mcnuggets",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(5).saturationModifier(6f).build())));
+                    .food(new FoodComponent.Builder().hunger(5).saturationModifier(2.5f).build())));
     public static final Item FRIES = registerItem("fries",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(4).saturationModifier(6f).build())));
+                    .food(new FoodComponent.Builder().hunger(4).saturationModifier(2f).build())));
     public static final Item HAPPY_MEAL = registerItem("happy_meal",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.UNCOMMON)
-                    .food(new FoodComponent.Builder().hunger(20).saturationModifier(30f).build())));
+                    .food(new FoodComponent.Builder().hunger(20).saturationModifier(10f).build())));
     public static final Item COCA_COLA = registerItem("coca_cola",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(4f).build())) {
+                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(1.5f).build())) {
                 @Override
                 public UseAction getUseAction(ItemStack stack) {
                     return stack.getItem().isFood() ? UseAction.DRINK : UseAction.NONE;
@@ -68,7 +68,7 @@ public class ModItems {
             });
     public static final Item FANTA = registerItem("fanta",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(4f).build())) {
+                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(1.5f).build())) {
                 @Override
                 public UseAction getUseAction(ItemStack stack) {
                     return stack.getItem().isFood() ? UseAction.DRINK : UseAction.NONE;
@@ -84,7 +84,7 @@ public class ModItems {
             });
     public static final Item LIPTON_ICE_TEA_PEACH = registerItem("lipton_ice_tea_peach",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(4f).build())) {
+                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(1.5f).build())) {
                 @Override
                 public UseAction getUseAction(ItemStack stack) {
                     return stack.getItem().isFood() ? UseAction.DRINK : UseAction.NONE;
@@ -92,7 +92,7 @@ public class ModItems {
             });
     public static final Item MCFLURRY = registerItem("mcflurry",
             new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)
-                    .food(new FoodComponent.Builder().hunger(5).saturationModifier(0.3f).build())));
+                    .food(new FoodComponent.Builder().hunger(5).saturationModifier(2.5f).build())));
     public static final SwordItem KNIFE = registerSwordItem(
             new SwordItem(new ToolMaterial() {
                 @Override
