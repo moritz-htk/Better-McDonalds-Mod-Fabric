@@ -18,7 +18,7 @@
     },
     "show_toast": false,
     "title": {
-      "translate": "advancement.bettermcdonaldsmod.start.title"
+      "text": "Better McDonald's Mod"
     }
   },
   "requirements": [

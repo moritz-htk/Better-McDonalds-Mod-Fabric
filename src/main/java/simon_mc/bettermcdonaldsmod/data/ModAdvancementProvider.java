@@ -24,7 +24,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
     public void generateAdvancement(Consumer<Advancement> consumer) {
         Advancement START = Advancement.Builder.create()
                 .display(ModItems.HAPPY_MEAL,
-                        Text.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".start.title"),
+                        Text.literal("Better McDonald's Mod"),
                         Text.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".start.description"),
                         new Identifier(BetterMcDonaldsMod.MOD_ID, "textures/screens/advancement_tab.png"),
                         AdvancementFrame.TASK, false, false, false)
