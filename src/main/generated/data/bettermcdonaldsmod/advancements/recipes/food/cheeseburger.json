@@ -56,5 +56,6 @@
     "recipes": [
       "bettermcdonaldsmod:cheeseburger"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

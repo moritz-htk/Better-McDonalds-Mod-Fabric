@@ -69,5 +69,6 @@
     "recipes": [
       "bettermcdonaldsmod:big_mac"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

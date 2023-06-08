@@ -54,5 +54,6 @@
     "recipes": [
       "bettermcdonaldsmod:fries"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

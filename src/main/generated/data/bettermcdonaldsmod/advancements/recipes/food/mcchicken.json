@@ -69,5 +69,6 @@
     "recipes": [
       "bettermcdonaldsmod:mcchicken"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

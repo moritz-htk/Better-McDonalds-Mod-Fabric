@@ -67,5 +67,6 @@
     "recipes": [
       "bettermcdonaldsmod:sprite"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

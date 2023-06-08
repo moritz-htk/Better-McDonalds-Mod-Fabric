@@ -43,5 +43,6 @@
     "recipes": [
       "bettermcdonaldsmod:knife"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -43,5 +43,6 @@
     "recipes": [
       "bettermcdonaldsmod:chicken_mcnuggets"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

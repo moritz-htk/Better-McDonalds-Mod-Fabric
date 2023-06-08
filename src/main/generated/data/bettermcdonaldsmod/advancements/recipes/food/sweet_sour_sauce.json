@@ -80,5 +80,6 @@
     "recipes": [
       "bettermcdonaldsmod:sweet_sour_sauce"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -67,5 +67,6 @@
     "recipes": [
       "bettermcdonaldsmod:lipton_ice_tea_peach"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -43,5 +43,6 @@
     "recipes": [
       "bettermcdonaldsmod:hamburger"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

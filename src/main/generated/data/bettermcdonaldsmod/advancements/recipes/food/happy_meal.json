@@ -63,5 +63,6 @@
     "recipes": [
       "bettermcdonaldsmod:happy_meal"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

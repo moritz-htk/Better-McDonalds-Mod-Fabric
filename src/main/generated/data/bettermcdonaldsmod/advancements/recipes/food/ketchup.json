@@ -67,5 +67,6 @@
     "recipes": [
       "bettermcdonaldsmod:ketchup"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

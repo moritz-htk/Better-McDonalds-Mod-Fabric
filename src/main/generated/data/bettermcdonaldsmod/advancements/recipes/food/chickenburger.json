@@ -69,5 +69,6 @@
     "recipes": [
       "bettermcdonaldsmod:chickenburger"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

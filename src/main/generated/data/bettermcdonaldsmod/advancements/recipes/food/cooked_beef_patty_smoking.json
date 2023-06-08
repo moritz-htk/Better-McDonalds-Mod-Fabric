@@ -30,5 +30,6 @@
     "recipes": [
       "bettermcdonaldsmod:cooked_beef_patty_smoking"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

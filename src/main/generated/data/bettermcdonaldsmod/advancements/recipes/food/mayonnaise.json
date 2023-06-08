@@ -30,5 +30,6 @@
     "recipes": [
       "bettermcdonaldsmod:mayonnaise"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
