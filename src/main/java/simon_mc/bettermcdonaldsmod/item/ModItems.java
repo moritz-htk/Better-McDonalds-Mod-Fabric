@@ -150,36 +150,7 @@ public class ModItems {
         return Registry.register(Registries.ITEM, new Identifier(BetterMcDonaldsMod.MOD_ID, "knife"), item);
     }
 
-    public static void addItemsToItemGroup() {
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, SALT);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, CHEESE);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, BEEF_PATTY);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, COOKED_BEEF_PATTY);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, MAYONNAISE);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, SWEET_SOUR_SAUCE);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, KETCHUP);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, HAMBURGER);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, CHEESEBURGER);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, BIG_MAC);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, CHICKENBURGER);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, MCCHICKEN);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, FILET_O_FISH);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, CHICKEN_MCNUGGETS);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, FRIES);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, HAPPY_MEAL);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, COCA_COLA);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, FANTA);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, SPRITE);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, LIPTON_ICE_TEA_PEACH);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, MCFLURRY);
-        addToItemGroup(ModItemGroup.BETTER_MCDONALDS_MOD_TAB, KNIFE);
-    }
-
-    private static void addToItemGroup(RegistryKey<ItemGroup> group, Item item) {
-        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
-    }
     public static void registerModItems() {
         BetterMcDonaldsMod.LOGGER.info("Registering ModItems for " + BetterMcDonaldsMod.MOD_ID);
-        addItemsToItemGroup();
     }
 }
