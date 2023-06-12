@@ -12,7 +12,7 @@ import simon_mc.bettermcdonaldsmod.world.gen.ModWorldGeneration;
 public class BetterMcDonaldsMod implements ModInitializer {
 
 	public static final String MOD_ID = "bettermcdonaldsmod";
-	public static final Logger LOGGER = LoggerFactory.getLogger("bettermcdonaldsmod");
+	public static final Logger LOGGER = LoggerFactory.getLogger(BetterMcDonaldsMod.MOD_ID);
 
 	@Override
 	public void onInitialize() {
