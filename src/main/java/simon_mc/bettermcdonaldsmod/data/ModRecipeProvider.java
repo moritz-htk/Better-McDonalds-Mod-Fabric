@@ -57,7 +57,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.COOKED_BEEF_PATTY) + "_campfire_cooking"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MAYONNAISE)
+                .input(Items.MILK_BUCKET)
                 .input(Items.EGG)
+                .criterion(hasItem(Items.MILK_BUCKET), conditionsFromItem(Items.MILK_BUCKET))
                 .criterion(hasItem(Items.EGG), conditionsFromItem(Items.EGG))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.MAYONNAISE)));
 
@@ -65,13 +67,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Items.WATER_BUCKET)
                 .input(Items.SUGAR)
                 .input(ModItemTagProvider.SALT)
-                .input(Items.WHEAT)
-                .input(Items.ORANGE_DYE)
+                .input(Items.HONEY_BOTTLE)
                 .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
                 .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
                 .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
-                .criterion(hasItem(Items.WHEAT), conditionsFromItem(Items.WHEAT))
-                .criterion(hasItem(Items.ORANGE_DYE), conditionsFromItem(Items.ORANGE_DYE))
+                .criterion(hasItem(Items.HONEY_BOTTLE), conditionsFromItem(Items.HONEY_BOTTLE))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.SWEET_SOUR_SAUCE)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.KETCHUP)
