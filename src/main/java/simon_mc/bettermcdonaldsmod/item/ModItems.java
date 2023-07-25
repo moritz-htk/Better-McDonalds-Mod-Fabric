@@ -1,14 +1,16 @@
 package simon_mc.bettermcdonaldsmod.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.*;
-import net.minecraft.recipe.Ingredient;
+import net.minecraft.item.FoodComponent;
+import net.minecraft.item.Item;
+import net.minecraft.item.SwordItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-import net.minecraft.util.UseAction;
 import simon_mc.bettermcdonaldsmod.BetterMcDonaldsMod;
+import simon_mc.bettermcdonaldsmod.item.custom.DrinkItem;
+import simon_mc.bettermcdonaldsmod.item.custom.KnifeItem;
 
 public class ModItems {
     public static final Item SALT = registerItem("salt", new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON)));
@@ -27,77 +29,12 @@ public class ModItems {
     public static final Item CHICKEN_MCNUGGETS = registerItem("chicken_mcnuggets", new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON).food(new FoodComponent.Builder().hunger(6).saturationModifier(4f).build())));
     public static final Item FRIES = registerItem("fries", new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON).food(new FoodComponent.Builder().hunger(4).saturationModifier(3f).build())));
     public static final Item HAPPY_MEAL = registerItem("happy_meal", new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.UNCOMMON).food(new FoodComponent.Builder().hunger(14).saturationModifier(9f).build())));
-    public static final Item COCA_COLA = registerItem("coca_cola", new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON).food(new FoodComponent.Builder().hunger(4).saturationModifier(2.5f).build())) {
-                @Override
-                public UseAction getUseAction(ItemStack stack) {
-                    return stack.getItem().isFood() ? UseAction.DRINK : UseAction.NONE;
-                }
-            });
-    public static final Item FANTA = registerItem("fanta", new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON).food(new FoodComponent.Builder().hunger(4).saturationModifier(3f).build())) {
-                @Override
-                public UseAction getUseAction(ItemStack stack) {
-                    return stack.getItem().isFood() ? UseAction.DRINK : UseAction.NONE;
-                }
-            });
-    public static final Item SPRITE = registerItem("sprite", new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON).food(new FoodComponent.Builder().hunger(4).saturationModifier(3f).build())) {
-                @Override
-                public UseAction getUseAction(ItemStack stack) {
-                    return stack.getItem().isFood() ? UseAction.DRINK : UseAction.NONE;
-                }
-            });
-    public static final Item LIPTON_ICE_TEA_PEACH = registerItem("lipton_ice_tea_peach", new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON).food(new FoodComponent.Builder().hunger(4).saturationModifier(3f).build())) {
-                @Override
-                public UseAction getUseAction(ItemStack stack) {
-                    return stack.getItem().isFood() ? UseAction.DRINK : UseAction.NONE;
-                }
-            });
+    public static final Item COCA_COLA = registerItem("coca_cola", new DrinkItem(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON).food(new FoodComponent.Builder().hunger(4).saturationModifier(2.5f).build())));
+    public static final Item FANTA = registerItem("fanta", new DrinkItem(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON).food(new FoodComponent.Builder().hunger(4).saturationModifier(3f).build())));
+    public static final Item SPRITE = registerItem("sprite", new DrinkItem(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON).food(new FoodComponent.Builder().hunger(4).saturationModifier(3f).build())));
+    public static final Item LIPTON_ICE_TEA_PEACH = registerItem("lipton_ice_tea_peach", new DrinkItem(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON).food(new FoodComponent.Builder().hunger(4).saturationModifier(3f).build())));
     public static final Item MCFLURRY = registerItem("mcflurry", new Item(new FabricItemSettings().maxCount(64).rarity(Rarity.COMMON).food(new FoodComponent.Builder().hunger(6).saturationModifier(4f).build())));
-    public static final SwordItem KNIFE = registerSwordItem(new SwordItem(new ToolMaterial() {
-                @Override
-                public int getDurability() {
-                    return 125;
-                }
-
-                @Override
-                public float getMiningSpeedMultiplier() {
-                    return 1.6f;
-                }
-
-                @Override
-                public float getAttackDamage() {
-                    return -2f;
-                }
-
-                @Override
-                public int getMiningLevel() {
-                    return 0;
-                }
-
-                @Override
-                public int getEnchantability() {
-                    return 0;
-                }
-
-                @Override
-                public Ingredient getRepairIngredient() {
-                    return Ingredient.ofItems(() -> Items.IRON_INGOT);
-                }
-            }, 3, -3, new FabricItemSettings().rarity(Rarity.COMMON)) {
-                @Override
-                public boolean hasRecipeRemainder() {
-                    return true;
-                }
-
-                @Override
-                public ItemStack getRecipeRemainder(ItemStack itemStack) {
-                    ItemStack retval = new ItemStack(this);
-                    retval.setDamage(itemStack.getDamage() + 1);
-                    if (retval.getDamage() >= retval.getMaxDamage()) {
-                        return ItemStack.EMPTY;
-                    }
-                    return retval;
-                }
-            });
+    public static final SwordItem KNIFE = registerSwordItem(new KnifeItem(3, 3, new FabricItemSettings().rarity(Rarity.COMMON)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BetterMcDonaldsMod.MOD_ID, name), item);
