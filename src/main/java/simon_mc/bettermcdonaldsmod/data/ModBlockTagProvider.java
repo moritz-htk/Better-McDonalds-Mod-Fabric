@@ -12,14 +12,16 @@ import simon_mc.bettermcdonaldsmod.block.ModBlocks;
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
+    public static final TagKey<Block> SALT = TagKey.of(Registries.BLOCK.getKey(), new Identifier("c", "salt_blocks"));
+    public static final TagKey<Block> SHOVEL_MINEABLE = TagKey.of(Registries.BLOCK.getKey(), new Identifier("minecraft", "mineable/shovel"));
+
     public ModBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        TagKey<Block> SALT = TagKey.of(Registries.BLOCK.getKey(), new Identifier("c", "salt_blocks"));
-        getOrCreateTagBuilder(SALT)
-                .add(ModBlocks.SALT_BLOCK);
+        getOrCreateTagBuilder(SALT).add(ModBlocks.SALT_BLOCK);
+        getOrCreateTagBuilder(SHOVEL_MINEABLE).add(ModBlocks.SALT_BLOCK);
     }
 }
