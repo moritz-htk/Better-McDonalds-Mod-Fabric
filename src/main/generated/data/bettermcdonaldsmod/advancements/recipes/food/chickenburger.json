@@ -25,24 +25,24 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_grass": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "minecraft:grass"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_ketchup": {
       "conditions": {
         "items": [
           {
             "items": [
               "bettermcdonaldsmod:ketchup"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_lettuce": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bettermcdonaldsmod:lettuce"
             ]
           }
         ]
@@ -61,7 +61,7 @@
       "has_bread",
       "has_cooked_chicken",
       "has_ketchup",
-      "has_grass",
+      "has_lettuce",
       "has_the_recipe"
     ]
   ],
