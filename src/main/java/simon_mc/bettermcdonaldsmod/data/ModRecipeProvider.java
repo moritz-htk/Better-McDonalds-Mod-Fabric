@@ -30,6 +30,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModBlocks.SALT_BLOCK)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.TOMATO_SEEDS, 2)
+                .input(ModItems.TOMATO)
+                .criterion(hasItem(ModItems.TOMATO), conditionsFromItem(ModItems.TOMATO))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.TOMATO_SEEDS)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.LETTUCE_SEEDS, 2)
+                .input(ModItems.LETTUCE)
+                .criterion(hasItem(ModItems.LETTUCE), conditionsFromItem(ModItems.LETTUCE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.LETTUCE_SEEDS)));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHEESE, 2)
                 .input(Items.MILK_BUCKET)
                 .input(ModItemTagProvider.SALT)

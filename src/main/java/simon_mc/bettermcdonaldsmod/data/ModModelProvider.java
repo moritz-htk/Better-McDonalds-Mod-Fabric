@@ -22,7 +22,9 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.SALT, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOMATO, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TOMATO_SEEDS, Models.GENERATED);
         itemModelGenerator.register(ModItems.LETTUCE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LETTUCE_SEEDS, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHEESE, Models.GENERATED);
         itemModelGenerator.register(ModItems.BEEF_PATTY, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOKED_BEEF_PATTY, Models.GENERATED);
