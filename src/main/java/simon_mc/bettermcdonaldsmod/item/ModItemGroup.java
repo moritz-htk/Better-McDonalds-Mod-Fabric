@@ -18,6 +18,7 @@ public class ModItemGroup {
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.SALT_BLOCK);
                         entries.add(ModItems.SALT);
+                        entries.add(ModItems.TOMATO);
                         entries.add(ModItems.LETTUCE);
                         entries.add(ModItems.CHEESE);
                         entries.add(ModItems.BEEF_PATTY);
