@@ -50,6 +50,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(SAUCES)
                 .add(ModItems.MAYONNAISE)
                 .add(ModItems.SWEET_SOUR_SAUCE)
-                .add(ModItems.KETCHUP);
+                .add(ModItems.KETCHUP)
+                .add(ModItems.MUSTARD);
     }
 }

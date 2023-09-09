@@ -24,6 +24,7 @@ public class ModItemGroup {
                         entries.add(ModItems.MAYONNAISE);
                         entries.add(ModItems.SWEET_SOUR_SAUCE);
                         entries.add(ModItems.KETCHUP);
+                        entries.add(ModItems.MUSTARD);
                         entries.add(ModItems.HAMBURGER);
                         entries.add(ModItems.CHEESEBURGER);
                         entries.add(ModItems.BIG_MAC);

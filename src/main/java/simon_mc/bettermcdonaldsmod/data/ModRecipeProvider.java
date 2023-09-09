@@ -85,6 +85,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.RED_DYE), conditionsFromItem(Items.RED_DYE))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.KETCHUP)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MUSTARD)
+                .input(Items.WATER_BUCKET)
+                .input(Items.SUGAR)
+                .input(ModItemTagProvider.SALT)
+                .input(Items.PUMPKIN_SEEDS)
+                .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
+                .criterion(hasItem(Items.PUMPKIN_SEEDS), conditionsFromItem(Items.PUMPKIN_SEEDS))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.MUSTARD)));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.HAMBURGER)
                 .input(Items.BREAD)
                 .input(ModItems.COOKED_BEEF_PATTY)
