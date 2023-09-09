@@ -2,6 +2,7 @@ package simon_mc.bettermcdonaldsmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.block.ComposterBlock;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import simon_mc.bettermcdonaldsmod.block.ModBlocks;
@@ -20,5 +21,13 @@ public class BetterMcDonaldsMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModWorldGeneration.generateModWorldGen();
+		registerModCompostables();
+	}
+
+	private static void registerModCompostables() {
+		ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.TOMATO, 0.65f);
+		ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.TOMATO_SEEDS, 0.2f);
+		ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LETTUCE, 0.65f);
+		ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(ModItems.LETTUCE_SEEDS, 0.2f);
 	}
 }
