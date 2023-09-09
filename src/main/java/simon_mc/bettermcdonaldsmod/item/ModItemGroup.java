@@ -21,6 +21,8 @@ public class ModItemGroup {
                         entries.add(ModItems.CHEESE);
                         entries.add(ModItems.BEEF_PATTY);
                         entries.add(ModItems.COOKED_BEEF_PATTY);
+                        entries.add(ModItems.RAW_BACON);
+                        entries.add(ModItems.COOKED_BACON);
                         entries.add(ModItems.MAYONNAISE);
                         entries.add(ModItems.SWEET_SOUR_SAUCE);
                         entries.add(ModItems.KETCHUP);

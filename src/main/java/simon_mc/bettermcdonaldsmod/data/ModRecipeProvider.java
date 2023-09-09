@@ -56,6 +56,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.BEEF_PATTY), conditionsFromItem(ModItems.BEEF_PATTY))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.COOKED_BEEF_PATTY) + "_campfire_cooking"));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.RAW_BACON, 2)
+                .input(ModItems.KNIFE)
+                .input(Items.PORKCHOP)
+                .criterion(hasItem(ModItems.KNIFE), conditionsFromItem(ModItems.KNIFE))
+                .criterion(hasItem(Items.PORKCHOP), conditionsFromItem(Items.PORKCHOP))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.RAW_BACON)));
+
+        CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(ModItems.RAW_BACON), RecipeCategory.FOOD, ModItems.COOKED_BACON, 1.0f, 200)
+                .criterion(hasItem(ModItems.RAW_BACON), conditionsFromItem(ModItems.RAW_BACON))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.COOKED_BACON) + "_smelting"));
+
+        CookingRecipeJsonBuilder.createSmoking(Ingredient.ofItems(ModItems.RAW_BACON), RecipeCategory.FOOD, ModItems.COOKED_BACON, 1.0f, 100)
+                .criterion(hasItem(ModItems.RAW_BACON), conditionsFromItem(ModItems.RAW_BACON))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.COOKED_BACON) + "_smoking"));
+
+        CookingRecipeJsonBuilder.createCampfireCooking(Ingredient.ofItems(ModItems.RAW_BACON), RecipeCategory.FOOD, ModItems.COOKED_BACON, 1.0f, 600)
+                .criterion(hasItem(ModItems.RAW_BACON), conditionsFromItem(ModItems.RAW_BACON))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.COOKED_BACON) + "_campfire_cooking"));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MAYONNAISE)
                 .input(Items.MILK_BUCKET)
                 .input(Items.EGG)
