@@ -6,6 +6,8 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import simon_mc.bettermcdonaldsmod.block.ModBlocks;
+import simon_mc.bettermcdonaldsmod.block.custom.LettuceCropBlock;
+import simon_mc.bettermcdonaldsmod.block.custom.TomatoCropBlock;
 import simon_mc.bettermcdonaldsmod.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -16,15 +18,15 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SALT_BLOCK);
+        blockStateModelGenerator.registerCrop(ModBlocks.TOMATO_CROP, TomatoCropBlock.AGE, 0, 1, 2, 3);
+        blockStateModelGenerator.registerCrop(ModBlocks.LETTUCE_CROP, LettuceCropBlock.AGE, 0, 1, 2, 3);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.SALT, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOMATO, Models.GENERATED);
-        itemModelGenerator.register(ModItems.TOMATO_SEEDS, Models.GENERATED);
         itemModelGenerator.register(ModItems.LETTUCE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LETTUCE_SEEDS, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHEESE, Models.GENERATED);
         itemModelGenerator.register(ModItems.BEEF_PATTY, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOKED_BEEF_PATTY, Models.GENERATED);

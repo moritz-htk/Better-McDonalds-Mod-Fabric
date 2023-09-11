@@ -22,7 +22,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "simon_mc.bettermcdonaldsmod.BetterMcDonaldsMod"
+			"simon_mc.bettermcdonaldsmod.BetterMcDonaldsMod"
+		],
+		"client": [
+			"simon_mc.bettermcdonaldsmod.BetterMcDonaldsModClient"
 		],
 		"fabric-datagen": [
 			"simon_mc.bettermcdonaldsmod.DataGenerators"
