@@ -35,6 +35,7 @@ public class ModItems {
     public static final Item CHICKENBURGER = registerItem("chickenburger", new Item(new FabricItemSettings().food(registerFoodValues(9, 4.5f).build())));
     public static final Item MCCHICKEN = registerItem("mcchicken", new Item(new FabricItemSettings().food(registerFoodValues(10, 5f).build())));
     public static final Item FILET_O_FISH = registerItem("filet_o_fish", new Item(new FabricItemSettings().food(registerFoodValues(8, 4f).build())));
+    public static final Item MCWRAP = registerItem("mcwrap", new Item(new FabricItemSettings().food(registerFoodValues(7, 3.5f).build())));
     public static final Item CHICKEN_MCNUGGETS = registerItem("chicken_mcnuggets", new Item(new FabricItemSettings().food(registerFoodValues(6, 3f).build())));
     public static final Item FRIES = registerItem("fries", new Item(new FabricItemSettings().food(registerFoodValues(4, 2f).build())));
     public static final Item HAPPY_MEAL = registerItem("happy_meal", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON).food(registerFoodValues(14, 7f).build())));

@@ -183,6 +183,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.CHEESE), conditionsFromItem(ModItems.CHEESE))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.FILET_O_FISH)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MCWRAP)
+                .input(Items.WHEAT)
+                .input(Items.COOKED_CHICKEN)
+                .input(ModItems.MAYONNAISE)
+                .input(ModItemTagProvider.LETTUCE)
+                .criterion(hasItem(Items.WHEAT), conditionsFromItem(Items.WHEAT))
+                .criterion(hasItem(Items.COOKED_CHICKEN), conditionsFromItem(Items.COOKED_CHICKEN))
+                .criterion(hasItem(ModItems.MAYONNAISE), conditionsFromItem(ModItems.MAYONNAISE))
+                .criterion(hasItem(ModItems.LETTUCE), conditionsFromTag(ModItemTagProvider.LETTUCE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.MCWRAP)));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHICKEN_MCNUGGETS)
                 .input(ModItems.KNIFE)
                 .input(Items.COOKED_CHICKEN)
