@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "bettermcdonaldsmod:lettuce"
+      "tag": "c:lettuce"
     }
   ],
   "result": {

@@ -15,6 +15,10 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> SALT = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "salt"));
+    public static final TagKey<Item> TOMATO = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "tomato"));
+    public static final TagKey<Item> LETTUCE = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "lettuce"));
+    public static final TagKey<Item> TOMATO_SEEDS = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "seeds/tomato"));
+    public static final TagKey<Item> LETTUCE_SEEDS = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "seeds/lettuce"));
     public static final TagKey<Item> BURGERS = TagKey.of(Registries.ITEM.getKey(), new Identifier(BetterMcDonaldsMod.MOD_ID, "burgers"));
     public static final TagKey<Item> DRINKS = TagKey.of(Registries.ITEM.getKey(), new Identifier(BetterMcDonaldsMod.MOD_ID, "drinks"));
     public static final TagKey<Item> SIDE_DISHES = TagKey.of(Registries.ITEM.getKey(), new Identifier(BetterMcDonaldsMod.MOD_ID, "side_dishes"));
@@ -26,8 +30,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(SALT)
-                .add(ModItems.SALT);
+        getOrCreateTagBuilder(SALT).add(ModItems.SALT);
+        getOrCreateTagBuilder(TOMATO).add(ModItems.TOMATO);
+        getOrCreateTagBuilder(LETTUCE).add(ModItems.LETTUCE);
+        getOrCreateTagBuilder(TOMATO_SEEDS).add(ModItems.TOMATO_SEEDS);
+        getOrCreateTagBuilder(LETTUCE_SEEDS).add(ModItems.LETTUCE_SEEDS);
 
         getOrCreateTagBuilder(BURGERS)
                 .add(ModItems.HAMBURGER)

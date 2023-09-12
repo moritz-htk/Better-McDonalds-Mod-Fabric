@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "bettermcdonaldsmod:tomato"
-            ]
+            "tag": "c:tomato"
           }
         ]
       },

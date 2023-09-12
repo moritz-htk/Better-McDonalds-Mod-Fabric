@@ -15,7 +15,7 @@
       "item": "bettermcdonaldsmod:cheese"
     },
     {
-      "item": "bettermcdonaldsmod:lettuce"
+      "tag": "c:lettuce"
     }
   ],
   "result": {

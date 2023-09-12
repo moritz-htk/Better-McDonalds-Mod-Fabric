@@ -41,9 +41,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "bettermcdonaldsmod:lettuce"
-            ]
+            "tag": "c:lettuce"
           }
         ]
       },
