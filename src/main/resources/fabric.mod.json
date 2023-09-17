@@ -41,6 +41,9 @@
 		"catalogue": {
 			"banner": "icon.png",
 			"background": "background.png"
+		},
+		"modmenu": {
+			"update_checker": true
 		}
 	}
 }
