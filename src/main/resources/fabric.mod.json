@@ -39,7 +39,10 @@
 	},
 	"custom": {
 		"catalogue": {
-			"banner": "icon.png",
+			"icon": {
+				"item": "bettermcdonaldsmod:happy_meal"
+			},
+			"banner": "banner.png",
 			"background": "background.png"
 		},
 		"modmenu": {
