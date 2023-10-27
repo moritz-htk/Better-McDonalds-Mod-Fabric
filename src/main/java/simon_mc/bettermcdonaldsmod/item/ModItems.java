@@ -21,7 +21,7 @@ public class ModItems {
     public static final Item LETTUCE = registerItem("lettuce", new Item(new FabricItemSettings().food(registerFoodValues(2, 1f).build())));
     public static final Item LETTUCE_SEEDS = registerItem("lettuce_seeds", new AliasedBlockItem(ModBlocks.LETTUCE_CROP, new FabricItemSettings()));
     public static final Item CHEESE = registerItem("cheese", new Item(new FabricItemSettings().food(registerFoodValues(3, 1.5f).meat().build())));
-    public static final Item TORTILLA = registerItem("tortilla", new Item(new Item.Settings().food(registerFoodValues(3, 1.5f).build())));
+    public static final Item TORTILLA = registerItem("tortilla", new Item(new FabricItemSettings().food(registerFoodValues(3, 1.5f).build())));
     public static final Item BEEF_PATTY = registerItem("beef_patty", new Item(new FabricItemSettings().food(registerFoodValues(4, 2f).meat().build())));
     public static final Item COOKED_BEEF_PATTY = registerItem("cooked_beef_patty", new Item(new FabricItemSettings().food(registerFoodValues(6, 3f).meat().build())));
     public static final Item RAW_BACON = registerItem("raw_bacon", new Item(new FabricItemSettings().food(registerFoodValues(3, 1.5f).meat().build())));
@@ -32,6 +32,7 @@ public class ModItems {
     public static final Item MUSTARD = registerItem("mustard", new Item(new FabricItemSettings().food(registerFoodValues(2, 1f).build())));
     public static final Item HAMBURGER = registerItem("hamburger", new Item(new FabricItemSettings().food(registerFoodValues(8, 4f).build())));
     public static final Item CHEESEBURGER = registerItem("cheeseburger", new Item(new FabricItemSettings().food(registerFoodValues(10, 5f).build())));
+    public static final Item MCBACON = registerItem("mcbacon", new Item(new FabricItemSettings().food(registerFoodValues(10, 5f).build())));
     public static final Item BIG_MAC = registerItem("big_mac", new Item(new FabricItemSettings().food(registerFoodValues(12, 6f).build())));
     public static final Item CHICKENBURGER = registerItem("chickenburger", new Item(new FabricItemSettings().food(registerFoodValues(9, 4.5f).build())));
     public static final Item MCCHICKEN = registerItem("mcchicken", new Item(new FabricItemSettings().food(registerFoodValues(10, 5f).build())));

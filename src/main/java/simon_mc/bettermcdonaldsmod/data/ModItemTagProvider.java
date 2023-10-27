@@ -39,6 +39,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(BURGERS)
                 .add(ModItems.HAMBURGER)
                 .add(ModItems.CHEESEBURGER)
+                .add(ModItems.MCBACON)
                 .add(ModItems.BIG_MAC)
                 .add(ModItems.CHICKENBURGER)
                 .add(ModItems.MCCHICKEN)

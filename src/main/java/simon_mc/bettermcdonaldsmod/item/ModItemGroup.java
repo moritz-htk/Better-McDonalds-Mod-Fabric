@@ -34,6 +34,7 @@ public class ModItemGroup {
                         entries.add(ModItems.MUSTARD);
                         entries.add(ModItems.HAMBURGER);
                         entries.add(ModItems.CHEESEBURGER);
+                        entries.add(ModItems.MCBACON);
                         entries.add(ModItems.BIG_MAC);
                         entries.add(ModItems.CHICKENBURGER);
                         entries.add(ModItems.MCCHICKEN);

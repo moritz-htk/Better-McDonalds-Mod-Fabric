@@ -152,6 +152,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.CHEESE), conditionsFromItem(ModItems.CHEESE))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.CHEESEBURGER)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MCBACON)
+                .input(Items.BREAD)
+                .input(ModItems.COOKED_BEEF_PATTY)
+                .input(ModItems.CHEESE)
+                .input(ModItems.COOKED_BACON)
+                .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
+                .criterion(hasItem(ModItems.COOKED_BEEF_PATTY), conditionsFromItem(ModItems.COOKED_BEEF_PATTY))
+                .criterion(hasItem(ModItems.CHEESE), conditionsFromItem(ModItems.CHEESE))
+                .criterion(hasItem(ModItems.COOKED_BACON), conditionsFromItem(ModItems.COOKED_BACON))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.MCBACON)));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BIG_MAC)
                 .input(Items.BREAD)
                 .input(ModItems.COOKED_BEEF_PATTY, 2)
