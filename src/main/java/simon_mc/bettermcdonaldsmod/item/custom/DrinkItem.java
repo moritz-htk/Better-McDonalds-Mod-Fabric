@@ -3,10 +3,11 @@ package simon_mc.bettermcdonaldsmod.item.custom;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.UseAction;
+import simon_mc.bettermcdonaldsmod.item.ModItems;
 
 public class DrinkItem extends Item {
     public DrinkItem(Settings settings) {
-        super(settings);
+        super(settings.food(ModItems.registerFoodValues(3, 1.5f).build()));
     }
 
     @Override

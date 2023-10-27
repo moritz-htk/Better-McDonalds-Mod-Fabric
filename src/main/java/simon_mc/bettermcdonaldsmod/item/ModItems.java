@@ -41,10 +41,10 @@ public class ModItems {
     public static final Item CHICKEN_MCNUGGETS = registerItem("chicken_mcnuggets", new Item(new FabricItemSettings().food(registerFoodValues(4, 2f).build())));
     public static final Item FRIES = registerItem("fries", new Item(new FabricItemSettings().food(registerFoodValues(5, 2.5f).build())));
     public static final Item HAPPY_MEAL = registerItem("happy_meal", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON).food(registerFoodValues(14, 7f).build())));
-    public static final Item COCA_COLA = registerItem("coca_cola", new DrinkItem(new FabricItemSettings().food(registerFoodValues(3, 1.5f).build())));
-    public static final Item FANTA = registerItem("fanta", new DrinkItem(new FabricItemSettings().food(registerFoodValues(3, 1.5f).build())));
-    public static final Item SPRITE = registerItem("sprite", new DrinkItem(new FabricItemSettings().food(registerFoodValues(3, 1.5f).build())));
-    public static final Item LIPTON_ICE_TEA_PEACH = registerItem("lipton_ice_tea_peach", new DrinkItem(new FabricItemSettings().food(registerFoodValues(3, 1.5f).build())));
+    public static final Item COCA_COLA = registerItem("coca_cola", new DrinkItem(new FabricItemSettings()));
+    public static final Item FANTA = registerItem("fanta", new DrinkItem(new FabricItemSettings()));
+    public static final Item SPRITE = registerItem("sprite", new DrinkItem(new FabricItemSettings()));
+    public static final Item LIPTON_ICE_TEA_PEACH = registerItem("lipton_ice_tea_peach", new DrinkItem(new FabricItemSettings()));
     public static final Item MCFLURRY = registerItem("mcflurry", new Item(new FabricItemSettings().food(registerFoodValues(6, 3f).build())));
     public static final SwordItem KNIFE = registerSwordItem(new KnifeItem(3, 3, new FabricItemSettings()));
 
