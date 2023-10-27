@@ -23,6 +23,7 @@ public class ModItemGroup {
                         entries.add(ModItems.LETTUCE);
                         entries.add(ModItems.LETTUCE_SEEDS);
                         entries.add(ModItems.CHEESE);
+                        entries.add(ModItems.TORTILLA);
                         entries.add(ModItems.BEEF_PATTY);
                         entries.add(ModItems.COOKED_BEEF_PATTY);
                         entries.add(ModItems.RAW_BACON);

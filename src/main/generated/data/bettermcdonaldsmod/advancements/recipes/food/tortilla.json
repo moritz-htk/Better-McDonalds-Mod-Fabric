@@ -1,35 +1,23 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cooked_chicken": {
+    "has_egg": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:cooked_chicken"
+              "minecraft:egg"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_lettuce": {
+    "has_salt": {
       "conditions": {
         "items": [
           {
-            "tag": "c:lettuce"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_mayonnaise": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "bettermcdonaldsmod:mayonnaise"
-            ]
+            "tag": "c:salt"
           }
         ]
       },
@@ -37,16 +25,28 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "bettermcdonaldsmod:mcwrap"
+        "recipe": "bettermcdonaldsmod:tortilla"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_tortilla": {
+    "has_water_bucket": {
       "conditions": {
         "items": [
           {
             "items": [
-              "bettermcdonaldsmod:tortilla"
+              "minecraft:water_bucket"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_wheat": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:wheat"
             ]
           }
         ]
@@ -56,16 +56,16 @@
   },
   "requirements": [
     [
-      "has_tortilla",
-      "has_cooked_chicken",
-      "has_mayonnaise",
-      "has_lettuce",
+      "has_water_bucket",
+      "has_wheat",
+      "has_egg",
+      "has_salt",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "bettermcdonaldsmod:mcwrap"
+      "bettermcdonaldsmod:tortilla"
     ]
   },
   "sends_telemetry_event": false

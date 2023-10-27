@@ -47,6 +47,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.CHEESE)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.TORTILLA, 2)
+                .input(Items.WATER_BUCKET)
+                .input(Items.WHEAT, 2)
+                .input(Items.EGG)
+                .input(ModItemTagProvider.SALT)
+                .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
+                .criterion(hasItem(Items.WHEAT), conditionsFromItem(Items.WHEAT))
+                .criterion(hasItem(Items.EGG), conditionsFromItem(Items.EGG))
+                .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALT))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.TORTILLA)));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BEEF_PATTY, 2)
                 .input(ModItems.KNIFE)
                 .input(Items.BEEF)
@@ -184,11 +195,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.FILET_O_FISH)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MCWRAP)
-                .input(Items.WHEAT)
+                .input(ModItems.TORTILLA)
                 .input(Items.COOKED_CHICKEN)
                 .input(ModItems.MAYONNAISE)
                 .input(ModItemTagProvider.LETTUCE)
-                .criterion(hasItem(Items.WHEAT), conditionsFromItem(Items.WHEAT))
+                .criterion(hasItem(ModItems.TORTILLA), conditionsFromItem(ModItems.TORTILLA))
                 .criterion(hasItem(Items.COOKED_CHICKEN), conditionsFromItem(Items.COOKED_CHICKEN))
                 .criterion(hasItem(ModItems.MAYONNAISE), conditionsFromItem(ModItems.MAYONNAISE))
                 .criterion(hasItem(ModItems.LETTUCE), conditionsFromTag(ModItemTagProvider.LETTUCE))
