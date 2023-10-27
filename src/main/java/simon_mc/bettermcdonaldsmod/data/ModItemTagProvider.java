@@ -14,18 +14,22 @@ import simon_mc.bettermcdonaldsmod.item.ModItems;
 import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
-    public static final TagKey<Item> SALT = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "salt"));
-    public static final TagKey<Item> TOMATO = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "tomato"));
-    public static final TagKey<Item> LETTUCE = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "lettuce"));
-    public static final TagKey<Item> TOMATO_SEEDS = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "seeds/tomato"));
-    public static final TagKey<Item> LETTUCE_SEEDS = TagKey.of(Registries.ITEM.getKey(), new Identifier("c", "seeds/lettuce"));
-    public static final TagKey<Item> BURGERS = TagKey.of(Registries.ITEM.getKey(), new Identifier(BetterMcDonaldsMod.MOD_ID, "burgers"));
-    public static final TagKey<Item> DRINKS = TagKey.of(Registries.ITEM.getKey(), new Identifier(BetterMcDonaldsMod.MOD_ID, "drinks"));
-    public static final TagKey<Item> SIDE_DISHES = TagKey.of(Registries.ITEM.getKey(), new Identifier(BetterMcDonaldsMod.MOD_ID, "side_dishes"));
-    public static final TagKey<Item> SAUCES = TagKey.of(Registries.ITEM.getKey(), new Identifier(BetterMcDonaldsMod.MOD_ID, "sauces"));
+    public static final TagKey<Item> SALT = registerItemTag("c", "salt");
+    public static final TagKey<Item> TOMATO = registerItemTag("c", "tomato");
+    public static final TagKey<Item> LETTUCE = registerItemTag("c", "lettuce");
+    public static final TagKey<Item> TOMATO_SEEDS = registerItemTag("c", "seeds/tomato");
+    public static final TagKey<Item> LETTUCE_SEEDS = registerItemTag("c", "seeds/lettuce");
+    public static final TagKey<Item> BURGERS = registerItemTag(BetterMcDonaldsMod.MOD_ID, "burgers");
+    public static final TagKey<Item> DRINKS = registerItemTag(BetterMcDonaldsMod.MOD_ID, "drinks");
+    public static final TagKey<Item> SIDE_DISHES = registerItemTag(BetterMcDonaldsMod.MOD_ID, "side_dishes");
+    public static final TagKey<Item> SAUCES = registerItemTag(BetterMcDonaldsMod.MOD_ID, "sauces");
 
     public ModItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture, @Nullable BlockTagProvider blockTagProvider) {
         super(output, completableFuture, blockTagProvider);
+    }
+
+    private static TagKey<Item> registerItemTag(String namespace, String path) {
+        return TagKey.of(Registries.ITEM.getKey(), new Identifier(namespace, path));
     }
 
     @Override
