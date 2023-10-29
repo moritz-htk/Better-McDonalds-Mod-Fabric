@@ -39,6 +39,7 @@ public class ModItemGroup {
                 entries.add(ModItems.MCCHICKEN);
                 entries.add(ModItems.FILET_O_FISH);
                 entries.add(ModItems.MCWRAP);
+                entries.add(ModItems.SNACK_SALAD);
                 entries.add(ModItems.CHICKEN_MCNUGGETS);
                 entries.add(ModItems.FRIES);
                 entries.add(ModItems.HAPPY_MEAL);

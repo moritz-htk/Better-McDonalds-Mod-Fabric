@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:tomato"
+    },
+    {
+      "tag": "c:lettuce"
+    }
+  ],
+  "result": {
+    "item": "bettermcdonaldsmod:snack_salad"
+  }
+}

@@ -216,6 +216,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.LETTUCE), conditionsFromTag(ModItemTagProvider.LETTUCE))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.MCWRAP)));
 
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SNACK_SALAD)
+                .input(ModItemTagProvider.TOMATO)
+                .input(ModItemTagProvider.LETTUCE)
+                .criterion(hasItem(ModItems.TOMATO), conditionsFromTag(ModItemTagProvider.TOMATO))
+                .criterion(hasItem(ModItems.LETTUCE), conditionsFromTag(ModItemTagProvider.LETTUCE))
+                .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.SNACK_SALAD)));
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHICKEN_MCNUGGETS)
                 .input(ModItems.KNIFE)
                 .input(Items.COOKED_CHICKEN)
