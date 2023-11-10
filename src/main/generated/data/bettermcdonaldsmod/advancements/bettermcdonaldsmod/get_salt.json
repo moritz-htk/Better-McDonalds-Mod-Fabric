@@ -1,12 +1,12 @@
 {
-  "parent": "bettermcdonaldsmod:get_seeds",
+  "parent": "bettermcdonaldsmod:bettermcdonaldsmod/root",
   "criteria": {
     "inventory_changed": {
       "conditions": {
         "items": [
           {
             "items": [
-              "bettermcdonaldsmod:lettuce"
+              "bettermcdonaldsmod:salt"
             ]
           }
         ]
@@ -18,16 +18,16 @@
     "announce_to_chat": true,
     "background": "bettermcdonaldsmod:textures/screens/advancement_tab.png",
     "description": {
-      "translate": "advancement.bettermcdonaldsmod.harvest_lettuce.description"
+      "translate": "advancement.bettermcdonaldsmod.get_salt.description"
     },
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "bettermcdonaldsmod:lettuce"
+      "item": "bettermcdonaldsmod:salt"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.bettermcdonaldsmod.harvest_lettuce.title"
+      "translate": "advancement.bettermcdonaldsmod.get_salt.title"
     }
   },
   "requirements": [

@@ -1,12 +1,12 @@
 {
-  "parent": "bettermcdonaldsmod:harvest_lettuce",
+  "parent": "bettermcdonaldsmod:bettermcdonaldsmod/craft_knife",
   "criteria": {
     "inventory_changed": {
       "conditions": {
         "items": [
           {
             "items": [
-              "bettermcdonaldsmod:snack_salad"
+              "bettermcdonaldsmod:hamburger"
             ]
           }
         ]
@@ -18,16 +18,16 @@
     "announce_to_chat": true,
     "background": "bettermcdonaldsmod:textures/screens/advancement_tab.png",
     "description": {
-      "translate": "advancement.bettermcdonaldsmod.craft_snack_salad.description"
+      "translate": "advancement.bettermcdonaldsmod.craft_burger.description"
     },
     "frame": "goal",
     "hidden": false,
     "icon": {
-      "item": "bettermcdonaldsmod:snack_salad"
+      "item": "bettermcdonaldsmod:hamburger"
     },
     "show_toast": true,
     "title": {
-      "translate": "advancement.bettermcdonaldsmod.craft_snack_salad.title"
+      "translate": "advancement.bettermcdonaldsmod.craft_burger.title"
     }
   },
   "requirements": [
