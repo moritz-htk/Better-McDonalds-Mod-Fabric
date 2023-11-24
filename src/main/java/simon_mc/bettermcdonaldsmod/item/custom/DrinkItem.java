@@ -7,7 +7,7 @@ import simon_mc.bettermcdonaldsmod.item.ModItems;
 
 public class DrinkItem extends Item {
     public DrinkItem(Settings settings) {
-        super(settings.food(ModItems.registerFoodValues(3, 1.5f).build()));
+        super(settings.food(ModItems.registerFoodValues(3, 0.4f).build()));
     }
 
     @Override
