@@ -12,13 +12,13 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import simon_mc.bettermcdonaldsmod.BetterMcDonaldsMod;
+import simon_mc.bettermcdonaldsmod.block.custom.LettuceCropBlock;
+import simon_mc.bettermcdonaldsmod.block.custom.TomatoCropBlock;
 
 public class ModBlocks {
-    public static final Block SALT_BLOCK = registerBlock(
-            new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND)
-                    .strength(0.5f)
-                    .sounds(BlockSoundGroup.SAND))
-    );
+    public static final Block SALT_BLOCK = registerBlock(new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND).strength(0.5f).sounds(BlockSoundGroup.SAND)));
+    public static final Block TOMATO_CROP = registerBlockWithoutBlockItem("tomato_crop", new TomatoCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block LETTUCE_CROP = registerBlockWithoutBlockItem("lettuce_crop", new LettuceCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
     private static Block registerBlock(Block block) {
         registerBlockItem(block);
@@ -26,9 +26,12 @@ public class ModBlocks {
     }
 
     private static Item registerBlockItem(Block block) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(BetterMcDonaldsMod.MOD_ID, "salt_block"),
-                new BlockItem(block, new FabricItemSettings()));
+        Item item = Registry.register(Registries.ITEM, new Identifier(BetterMcDonaldsMod.MOD_ID, "salt_block"), new BlockItem(block, new FabricItemSettings()));
         return item;
+    }
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
+        return Registry.register(Registries.BLOCK, new Identifier(BetterMcDonaldsMod.MOD_ID, name), block);
     }
 
     public static void registerModBlocks() {

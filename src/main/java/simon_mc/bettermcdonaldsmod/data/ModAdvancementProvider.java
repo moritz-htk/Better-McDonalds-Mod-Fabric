@@ -22,45 +22,42 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
 
     @Override
     public void generateAdvancement(Consumer<Advancement> consumer) {
-        Advancement START = Advancement.Builder.create()
-                .display(ModItems.HAPPY_MEAL,
-                        Text.literal("Better McDonald's Mod"),
-                        Text.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".start.description"),
-                        new Identifier(BetterMcDonaldsMod.MOD_ID, "textures/screens/advancement_tab.png"),
-                        AdvancementFrame.TASK, false, false, false)
-                .criterion("tick", TickCriterion.Conditions.createTick())
-                .build(consumer, BetterMcDonaldsMod.MOD_ID + ":start");
+        Advancement ROOT = createRootAdvancement(consumer, AdvancementFrame.TASK, ModItems.HAPPY_MEAL, "root");
 
-        Advancement GET_SALT = Advancement.Builder.create()
-                .display(makeNormalDisplay(AdvancementFrame.TASK, ModItems.SALT, "get_salt"))
-                .criterion("inventory_changed", InventoryChangedCriterion.Conditions.items(ModItems.SALT))
-                .parent(START)
-                .build(consumer, BetterMcDonaldsMod.MOD_ID + ":get_salt");
+        Advancement GET_SALT = createAdvancement(consumer, AdvancementFrame.TASK, ModItems.SALT, "get_salt", ROOT);
+        createAdvancement(consumer, AdvancementFrame.GOAL, ModItems.COCA_COLA, "craft_drink", GET_SALT);
 
-        Advancement CRAFT_KNIFE = Advancement.Builder.create()
-                .display(makeNormalDisplay(AdvancementFrame.TASK, ModItems.KNIFE, "craft_knife"))
-                .criterion("inventory_changed", InventoryChangedCriterion.Conditions.items(ModItems.KNIFE))
-                .parent(START)
-                .build(consumer, BetterMcDonaldsMod.MOD_ID + ":craft_knife");
+        Advancement CRAFT_KNIFE = createAdvancement(consumer, AdvancementFrame.TASK, ModItems.KNIFE, "craft_knife", ROOT);
+        createAdvancement(consumer, AdvancementFrame.GOAL, ModItems.HAMBURGER, "craft_burger", CRAFT_KNIFE);
 
-        Advancement.Builder.create()
-                .display(makeNormalDisplay(AdvancementFrame.GOAL, ModItems.HAMBURGER, "craft_burger"))
-                .criterion("inventory_changed", InventoryChangedCriterion.Conditions.items(ModItems.HAMBURGER))
-                .parent(CRAFT_KNIFE)
-                .build(consumer, BetterMcDonaldsMod.MOD_ID + ":craft_burger");
-
-        Advancement.Builder.create()
-                .display(makeNormalDisplay(AdvancementFrame.GOAL, ModItems.COCA_COLA, "craft_drink"))
-                .criterion("inventory_changed", InventoryChangedCriterion.Conditions.items(ModItems.COCA_COLA))
-                .parent(GET_SALT)
-                .build(consumer, BetterMcDonaldsMod.MOD_ID + ":craft_drink");
+        Advancement GET_SEEDS = createAdvancement(consumer, AdvancementFrame.TASK, ModItems.LETTUCE_SEEDS, "get_seeds", ROOT);
+        Advancement HARVEST_LETTUCE = createAdvancement(consumer, AdvancementFrame.TASK, ModItems.LETTUCE, "harvest_lettuce", GET_SEEDS);
+        createAdvancement(consumer, AdvancementFrame.GOAL, ModItems.SNACK_SALAD, "craft_snack_salad", HARVEST_LETTUCE);
     }
 
-    public static AdvancementDisplay makeNormalDisplay(AdvancementFrame frame, ItemConvertible item, String titleKey) {
-        return new AdvancementDisplay(item.asItem().getDefaultStack(),
-                Text.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + "." + titleKey + ".title"),
+    private Advancement createRootAdvancement(Consumer<Advancement> consumer, AdvancementFrame frame, ItemConvertible item, String titleKey) {
+        return Advancement.Builder.create()
+                .display(createAdvancementDisplay(item,
+                        Text.literal("Better McDonald's Mod"),
+                        titleKey, frame, false, false))
+                .criterion("tick", TickCriterion.Conditions.createTick())
+                .build(consumer, new Identifier(BetterMcDonaldsMod.MOD_ID, BetterMcDonaldsMod.MOD_ID + "/" + titleKey).toString());
+    }
+
+    private Advancement createAdvancement(Consumer<Advancement> consumer, AdvancementFrame frame, ItemConvertible item, String titleKey, Advancement parent) {
+        return Advancement.Builder.create()
+                .display(createAdvancementDisplay(item,
+                        Text.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + "." + titleKey + ".title"),
+                        titleKey, frame, true, true))
+                .criterion("inventory_changed", InventoryChangedCriterion.Conditions.items(item))
+                .parent(parent)
+                .build(consumer, new Identifier(BetterMcDonaldsMod.MOD_ID, BetterMcDonaldsMod.MOD_ID + "/" + titleKey).toString());
+    }
+
+    private AdvancementDisplay createAdvancementDisplay(ItemConvertible item, Text text, String titleKey, AdvancementFrame frame, boolean showToast, boolean announceToChat) {
+        return new AdvancementDisplay(item.asItem().getDefaultStack(), text,
                 Text.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + "." + titleKey + ".description"),
                 new Identifier(BetterMcDonaldsMod.MOD_ID, "textures/screens/advancement_tab.png"),
-                frame, true, true, false);
+                frame, showToast, announceToChat, false);
     }
 }

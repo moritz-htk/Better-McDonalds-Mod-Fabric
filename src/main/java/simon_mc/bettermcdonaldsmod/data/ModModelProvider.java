@@ -6,6 +6,8 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import simon_mc.bettermcdonaldsmod.block.ModBlocks;
+import simon_mc.bettermcdonaldsmod.block.custom.LettuceCropBlock;
+import simon_mc.bettermcdonaldsmod.block.custom.TomatoCropBlock;
 import simon_mc.bettermcdonaldsmod.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -16,23 +18,34 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SALT_BLOCK);
+        blockStateModelGenerator.registerCrop(ModBlocks.TOMATO_CROP, TomatoCropBlock.AGE, 0, 1, 2, 3);
+        blockStateModelGenerator.registerCrop(ModBlocks.LETTUCE_CROP, LettuceCropBlock.AGE, 0, 1, 2, 3);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.SALT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TOMATO, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LETTUCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHEESE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TORTILLA, Models.GENERATED);
         itemModelGenerator.register(ModItems.BEEF_PATTY, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOKED_BEEF_PATTY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_BACON, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_BACON, Models.GENERATED);
         itemModelGenerator.register(ModItems.MAYONNAISE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SWEET_SOUR_SAUCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.KETCHUP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MUSTARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.HAMBURGER, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHEESEBURGER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MCBACON, Models.GENERATED);
         itemModelGenerator.register(ModItems.BIG_MAC, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHICKENBURGER, Models.GENERATED);
         itemModelGenerator.register(ModItems.MCCHICKEN, Models.GENERATED);
         itemModelGenerator.register(ModItems.FILET_O_FISH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MCWRAP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SNACK_SALAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHICKEN_MCNUGGETS, Models.GENERATED);
         itemModelGenerator.register(ModItems.FRIES, Models.GENERATED);
         itemModelGenerator.register(ModItems.HAPPY_MEAL, Models.GENERATED);

@@ -12,10 +12,11 @@
       "tag": "c:salt"
     },
     {
-      "item": "minecraft:red_dye"
+      "tag": "c:tomato"
     }
   ],
   "result": {
+    "count": 2,
     "item": "bettermcdonaldsmod:ketchup"
   }
 }

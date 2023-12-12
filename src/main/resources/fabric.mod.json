@@ -1,23 +1,29 @@
 {
 	"schemaVersion": 1,
 	"id": "bettermcdonaldsmod",
-	"version": "1.20.1-3.0.3",
+	"version": "1.20.1-3.1.0",
 	"name": "Better McDonald's Mod",
-	"description": "Many well-known McDonalds products have been added.",
-	"authors": [
-		"simon_mc",
-		"Volwert123"
-	],
+	"description": "Many well-known McDonald's products have been added.",
 	"contact": {
 		"homepage": "https://www.curseforge.com/minecraft/mc-mods/better-mcdonalds-mod",
-		"sources": "https://github.com/simon-mc28/Better-McDonalds-Mod-Fabric"
+		"issues": "https://github.com/moritz-htk/Better-McDonalds-Mod-Fabric/issues",
+		"sources": "https://github.com/moritz-htk/Better-McDonalds-Mod-Fabric"
 	},
+	"authors": [
+		"moritz_htk"
+	],
+	"contributors": [
+		"Volwert123",
+		"RPorotos",
+		"kohari_nk",
+		"sovseabird"
+	],
 	"license": "moritz_htk Software License Agreement (mSLA)",
-	"icon": "assets/bettermcdonaldsmod/icon.png",
+	"icon": "icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "simon_mc.bettermcdonaldsmod.BetterMcDonaldsMod"
+			"simon_mc.bettermcdonaldsmod.BetterMcDonaldsMod"
 		],
 		"client": [
 			"simon_mc.bettermcdonaldsmod.BetterMcDonaldsModClient"
@@ -26,16 +32,22 @@
 			"simon_mc.bettermcdonaldsmod.DataGenerators"
 		]
 	},
-	"mixins": [
-		"bettermcdonaldsmod.mixins.json"
-	],
 	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": ">=1.20",
+		"fabricloader": ">=0.14.24",
+		"minecraft": ">=1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
 	},
-	"suggests": {
-		"another-mod": "*"
+	"custom": {
+		"catalogue": {
+			"icon": {
+				"item": "bettermcdonaldsmod:happy_meal"
+			},
+			"banner": "banner.png",
+			"background": "background.png"
+		},
+		"modmenu": {
+			"update_checker": true
+		}
 	}
 }
