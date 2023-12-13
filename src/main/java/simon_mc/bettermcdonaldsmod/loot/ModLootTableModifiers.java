@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 import simon_mc.bettermcdonaldsmod.item.ModItems;
 
 public class ModLootTableModifiers {
-    private static final Identifier GRASS_BLOCK_ID = new Identifier("minecraft", "blocks/grass");
+    private static final Identifier GRASS_BLOCK_ID = new Identifier("minecraft", "blocks/short_grass");
     private static final Identifier FERN_BLOCK_ID = new Identifier("minecraft", "blocks/fern");
 
     public static void modifyLootTables() {

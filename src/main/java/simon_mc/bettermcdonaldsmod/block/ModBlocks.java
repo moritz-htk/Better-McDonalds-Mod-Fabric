@@ -1,5 +1,6 @@
 package simon_mc.bettermcdonaldsmod.block;
 
+import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -16,7 +17,12 @@ import simon_mc.bettermcdonaldsmod.block.custom.LettuceCropBlock;
 import simon_mc.bettermcdonaldsmod.block.custom.TomatoCropBlock;
 
 public class ModBlocks {
-    public static final Block SALT_BLOCK = registerBlock(new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND).strength(0.5f).sounds(BlockSoundGroup.SAND)));
+    public static final Block SALT_BLOCK = registerBlock(new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND).strength(0.5f).sounds(BlockSoundGroup.SAND)) {
+        @Override
+        protected MapCodec<? extends FallingBlock> getCodec() {
+            return null;
+        }
+    });
     public static final Block TOMATO_CROP = registerBlockWithoutBlockItem("tomato_crop", new TomatoCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
     public static final Block LETTUCE_CROP = registerBlockWithoutBlockItem("lettuce_crop", new LettuceCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
