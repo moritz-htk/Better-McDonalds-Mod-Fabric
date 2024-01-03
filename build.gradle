@@ -1,26 +1,7 @@
-buildscript {
-	dependencies {
-		classpath "de.guntram.mcmod:crowdin-translate:${crowdin_translate_version}"
-	}
-
-	repositories {
-		maven {
-			name = 'CrowdinTranslate source'
-			url = "https://minecraft.guntram.de/maven/"
-		}
-	}
-}
-
 plugins {
 	id 'fabric-loom' version '1.4-SNAPSHOT'
 	id 'maven-publish'
 }
-
-apply plugin: 'de.guntram.mcmod.crowdin-translate'
-
-crowdintranslate.crowdinProjectName = 'better-mcdonalds-mod'
-crowdintranslate.minecraftProjectName = 'bettermcdonaldsmod'
-crowdintranslate.verbose = true
 
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
