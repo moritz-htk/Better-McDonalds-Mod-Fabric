@@ -47,7 +47,12 @@
 			"background": "background.png"
 		},
 		"modmenu": {
-			"update_checker": true
+			"update_checker": true,
+			"links": {
+				"modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/better-mcdonalds-mod",
+				"modmenu.github_releases": "https://github.com/moritz-htk/Better-McDonalds-Mod-Fabric/releases",
+				"modmenu.modrinth": "https://modrinth.com/mod/better-mcdonalds-mod"
+			}
 		}
 	}
 }
