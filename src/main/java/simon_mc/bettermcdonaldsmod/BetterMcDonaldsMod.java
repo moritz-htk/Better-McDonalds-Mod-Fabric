@@ -16,12 +16,14 @@ public class BetterMcDonaldsMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		LOGGER.info("Loading " + BetterMcDonaldsMod.MOD_ID);
         ModItemGroup.registerItemGroups();
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
 		ModLootTableModifiers.modifyLootTables();
 		ModWorldGeneration.generateModWorldGen();
 		registerModCompostables();
+		LOGGER.info("Loading of " + BetterMcDonaldsMod.MOD_ID + " complete");
 	}
 
 	private static void registerModCompostables() {

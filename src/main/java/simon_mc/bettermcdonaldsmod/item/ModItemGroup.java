@@ -51,7 +51,5 @@ public class ModItemGroup {
                 entries.add(ModItems.KNIFE);
             }).build());
 
-    public static void registerItemGroups() {
-        BetterMcDonaldsMod.LOGGER.info("Registering ModItemGroups for " + BetterMcDonaldsMod.MOD_ID);
-    }
+    public static void registerItemGroups() {}
 }

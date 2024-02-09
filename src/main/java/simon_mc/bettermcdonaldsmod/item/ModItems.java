@@ -61,7 +61,5 @@ public class ModItems {
         return new FoodComponent.Builder().hunger(hunger).saturationModifier(saturation);
     }
 
-    public static void registerModItems() {
-        BetterMcDonaldsMod.LOGGER.info("Registering ModItems for " + BetterMcDonaldsMod.MOD_ID);
-    }
+    public static void registerModItems() {}
 }

@@ -40,7 +40,5 @@ public class ModBlocks {
         return Registry.register(Registries.BLOCK, new Identifier(BetterMcDonaldsMod.MOD_ID, name), block);
     }
 
-    public static void registerModBlocks() {
-        BetterMcDonaldsMod.LOGGER.info("Registering ModBlocks for " + BetterMcDonaldsMod.MOD_ID);
-    }
+    public static void registerModBlocks() {}
 }
