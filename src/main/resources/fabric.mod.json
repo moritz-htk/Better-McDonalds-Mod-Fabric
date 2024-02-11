@@ -30,13 +30,17 @@
 		],
 		"fabric-datagen": [
 			"simon_mc.bettermcdonaldsmod.DataGenerators"
+		],
+		"modmenu": [
+			"simon_mc.bettermcdonaldsmod.config.ModMenuImplementation"
 		]
 	},
 	"depends": {
 		"fabricloader": ">=0.15.3",
 		"minecraft": ">=1.20.4",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"cloth-config2": ">=13.0.0"
 	},
 	"custom": {
 		"catalogue": {

@@ -5,13 +5,14 @@ import net.minecraft.item.Items;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import simon_mc.bettermcdonaldsmod.BetterMcDonaldsMod;
 
 public class KnifeItem extends SwordItem {
     public KnifeItem(int attackDamage, float attackSpeed, Settings settings) {
         super(new ToolMaterial() {
             @Override
             public int getDurability() {
-                return 125;
+                return BetterMcDonaldsMod.CONFIG.knifeDurability();
             }
 
             @Override
@@ -49,7 +50,11 @@ public class KnifeItem extends SwordItem {
     @Override
     public ItemStack getRecipeRemainder(ItemStack itemStack) {
         ItemStack retval = new ItemStack(this);
-        retval.setDamage(itemStack.getDamage() + 1);
+        if (BetterMcDonaldsMod.CONFIG.knifeCraftingDamage()) {
+            retval.setDamage(itemStack.getDamage() + 1);
+        } else {
+            retval.setDamage(itemStack.getDamage());
+        }
         if (retval.getDamage() >= retval.getMaxDamage()) {
             return ItemStack.EMPTY;
         }
