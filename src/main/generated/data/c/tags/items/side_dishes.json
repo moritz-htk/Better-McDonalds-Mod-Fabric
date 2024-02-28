@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "bettermcdonaldsmod:snack_salad",
     "bettermcdonaldsmod:chicken_mcnuggets",
     "bettermcdonaldsmod:fries"
   ]

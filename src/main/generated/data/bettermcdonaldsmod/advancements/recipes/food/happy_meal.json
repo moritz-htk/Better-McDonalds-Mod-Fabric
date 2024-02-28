@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "bettermcdonaldsmod:burgers"
+            "tag": "c:burgers"
           }
         ]
       },
@@ -27,7 +27,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "bettermcdonaldsmod:drinks"
+            "tag": "c:drinks"
           }
         ]
       },
@@ -37,7 +37,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "bettermcdonaldsmod:side_dishes"
+            "tag": "c:side_dishes"
           }
         ]
       },

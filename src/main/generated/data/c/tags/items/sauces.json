@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#c:mayonnaise",
+    "#c:sweet_sour_sauce",
+    "#c:ketchup",
+    "#c:mustard"
+  ]
+}

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "bettermcdonaldsmod:lettuce"
+    "bettermcdonaldsmod:lettuce",
+    "#c:crops/lettuce"
   ]
 }

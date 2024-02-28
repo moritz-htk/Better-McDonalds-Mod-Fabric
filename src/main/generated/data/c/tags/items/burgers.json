@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#c:hamburger",
+    "#c:cheeseburger",
+    "#c:chickenburger",
+    "#c:fishburger"
+  ]
+}

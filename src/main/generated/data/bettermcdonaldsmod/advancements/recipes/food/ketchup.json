@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "c:salt"
+            "tag": "c:salts"
           }
         ]
       },
@@ -33,7 +33,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "c:tomato"
+            "tag": "c:tomatoes"
           }
         ]
       },

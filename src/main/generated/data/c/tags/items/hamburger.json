@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "bettermcdonaldsmod:hamburger",
+    "bettermcdonaldsmod:mcbacon",
+    "bettermcdonaldsmod:big_mac",
+    "#c:burgers/hamburger"
+  ]
+}

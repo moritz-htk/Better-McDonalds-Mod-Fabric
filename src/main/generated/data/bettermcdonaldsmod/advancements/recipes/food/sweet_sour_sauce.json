@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "c:salt"
+            "tag": "c:salts"
           }
         ]
       },

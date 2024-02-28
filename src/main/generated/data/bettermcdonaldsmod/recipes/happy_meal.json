@@ -3,13 +3,13 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "bettermcdonaldsmod:burgers"
+      "tag": "c:burgers"
     },
     {
-      "tag": "bettermcdonaldsmod:drinks"
+      "tag": "c:drinks"
     },
     {
-      "tag": "bettermcdonaldsmod:side_dishes"
+      "tag": "c:side_dishes"
     },
     {
       "item": "minecraft:apple"
