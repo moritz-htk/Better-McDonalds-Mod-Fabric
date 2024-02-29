@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/3Fk3R5m.png"  alt="Better McDonald's Mod Logo"/>
+    <img src="https://i.imgur.com/3Fk3R5m.png"  alt="Better McDonald's Mod Logo"/>
 </p>
 
 [![CurseForge Downloads](https://cf.way2muchnoise.eu/short_546816_downloads.svg?badge_style=for_the_badge)](https://www.curseforge.com/minecraft/mc-mods/better-mcdonalds-mod)
@@ -20,7 +20,7 @@ The Better McDonald's Mod was created by [moritz_htk](https://github.com/moritz-
 |                   | Fabric | Forge  | NeoForge |
 |-------------------|--------|--------|----------|
 | Minecraft Version | 1.20.4 | 1.20.4 | 1.20.4   |
-| Mod Version       | 3.1.0  | 3.1.0  | 3.1.0    |
+| Mod Version       | 3.2.0  | 3.2.0  | 3.2.0    |
 
 Click [here](https://github.com/moritz-htk/Better-McDonalds-Mod-Fabric/releases) to get to the release list!
 
@@ -34,9 +34,9 @@ Click [here](https://github.com/moritz-htk/Better-McDonalds-Mod-Fabric/releases)
 
 ## Credits
 - [Volwert123](https://github.com/Volwert123/) (Contributor)
-- [RPorotos](https://de.fiverr.com/rporotos) (Textures)
+- [RPorotos](https://www.fiverr.com/rporotos) (Textures)
 - [kohari_nk](https://www.fiverr.com/kohari_nk) (Textures)
-- [sovseabird](https://de.fiverr.com/sovseabird) (Textures)
+- [sovseabird](https://www.fiverr.com/sovseabird) (Textures)
 
 ## Dependencies
 - [Cloth Config API](https://github.com/shedaniel/cloth-config) (v13.0.121 and above)
