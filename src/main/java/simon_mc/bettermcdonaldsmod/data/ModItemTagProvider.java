@@ -14,42 +14,42 @@ import simon_mc.bettermcdonaldsmod.item.ModItems;
 import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
-    public static final TagKey<Item> SALTS = registerItemTag("c", "salts");
-    public static final TagKey<Item> SALT = registerItemTag("c", "salt");
-    public static final TagKey<Item> SALT_BLOCKS = registerItemTag("c", "salt_blocks");
-    public static final TagKey<Item> CROPS = registerItemTag("c", "crops");
-    public static final TagKey<Item> TOMATO = registerItemTag("c", "tomatoes");
-    public static final TagKey<Item> CROPS_TOMATO = registerItemTag("c", "crops/tomato");
-    public static final TagKey<Item> LETTUCE = registerItemTag("c", "lettuce");
-    public static final TagKey<Item> CROPS_LETTUCE = registerItemTag("c", "crops/lettuce");
-    public static final TagKey<Item> SEEDS = registerItemTag("c", "seeds");
-    public static final TagKey<Item> TOMATO_SEEDS = registerItemTag("c", "tomato_seeds");
-    public static final TagKey<Item> SEEDS_TOMATO = registerItemTag("c", "seeds/tomato");
-    public static final TagKey<Item> LETTUCE_SEEDS = registerItemTag("c", "lettuce_seeds");
-    public static final TagKey<Item> SEEDS_LETTUCE = registerItemTag("c", "seeds/lettuce");
-    public static final TagKey<Item> COOKED_MEAT = registerItemTag("c", "cooked_meat");
-    public static final TagKey<Item> COOKED_BACON = registerItemTag("c", "cooked_bacon");
-    public static final TagKey<Item> BURGERS = registerItemTag("c", "burgers");
-    public static final TagKey<Item> HAMBURGER = registerItemTag("c", "hamburger");
-    public static final TagKey<Item> BURGER_HAMBURGER = registerItemTag("c", "burgers/hamburger");
-    public static final TagKey<Item> CHEESEBURGER = registerItemTag("c", "cheeseburger");
-    public static final TagKey<Item> BURGER_CHEESEBURGER = registerItemTag("c", "burgers/cheeseburger");
-    public static final TagKey<Item> CHICKENBURGER = registerItemTag("c", "chickenburger");
-    public static final TagKey<Item> BURGER_CHICKENBURGER = registerItemTag("c", "burgers/chickenburger");
-    public static final TagKey<Item> FISHBURGER = registerItemTag("c", "fishburger");
-    public static final TagKey<Item> BURGER_FISHBURGER = registerItemTag("c", "burgers/fishburger");
-    public static final TagKey<Item> SIDE_DISHES = registerItemTag("c", "side_dishes");
-    public static final TagKey<Item> DRINKS = registerItemTag("c", "drinks");
-    public static final TagKey<Item> SAUCES = registerItemTag("c", "sauces");
-    public static final TagKey<Item> MAYONNAISE = registerItemTag("c", "mayonnaise");
-    public static final TagKey<Item> SAUCES_MAYONNAISE = registerItemTag("c", "sauces/mayonnaise");
-    public static final TagKey<Item> SWEET_SOUR_SAUCE = registerItemTag("c", "sweet_sour_sauce");
-    public static final TagKey<Item> SAUCES_SWEET_SOUR_SAUCE = registerItemTag("c", "sauces/sweet_sour_sauce");
-    public static final TagKey<Item> KETCHUP = registerItemTag("c", "ketchup");
-    public static final TagKey<Item> SAUCES_KETCHUP = registerItemTag("c", "sauces/ketchup");
-    public static final TagKey<Item> MUSTARD = registerItemTag("c", "mustard");
-    public static final TagKey<Item> SAUCES_MUSTARD = registerItemTag("c", "sauces/mustard");
-    public static final TagKey<Item> KNIVES = registerItemTag("c", "knives");
+    public static final TagKey<Item> SALTS = registerItemTag("salts");
+    public static final TagKey<Item> SALT = registerItemTag("salt");
+    public static final TagKey<Item> SALT_BLOCKS = registerItemTag("salt_blocks");
+    public static final TagKey<Item> CROPS = registerItemTag("crops");
+    public static final TagKey<Item> TOMATOES = registerItemTag("tomatoes");
+    public static final TagKey<Item> CROPS_TOMATO = registerItemTag("crops/tomato");
+    public static final TagKey<Item> LETTUCE = registerItemTag("lettuce");
+    public static final TagKey<Item> CROPS_LETTUCE = registerItemTag("crops/lettuce");
+    public static final TagKey<Item> SEEDS = registerItemTag("seeds");
+    public static final TagKey<Item> TOMATO_SEEDS = registerItemTag("tomato_seeds");
+    public static final TagKey<Item> SEEDS_TOMATO = registerItemTag("seeds/tomato");
+    public static final TagKey<Item> LETTUCE_SEEDS = registerItemTag("lettuce_seeds");
+    public static final TagKey<Item> SEEDS_LETTUCE = registerItemTag("seeds/lettuce");
+    public static final TagKey<Item> COOKED_MEAT = registerItemTag("cooked_meat");
+    public static final TagKey<Item> COOKED_BACON = registerItemTag("cooked_bacon");
+    public static final TagKey<Item> BURGERS = registerItemTag("burgers");
+    public static final TagKey<Item> HAMBURGER = registerItemTag("hamburger");
+    public static final TagKey<Item> BURGER_HAMBURGER = registerItemTag("burgers/hamburger");
+    public static final TagKey<Item> CHEESEBURGER = registerItemTag("cheeseburger");
+    public static final TagKey<Item> BURGER_CHEESEBURGER = registerItemTag("burgers/cheeseburger");
+    public static final TagKey<Item> CHICKENBURGER = registerItemTag("chickenburger");
+    public static final TagKey<Item> BURGER_CHICKENBURGER = registerItemTag("burgers/chickenburger");
+    public static final TagKey<Item> FISHBURGER = registerItemTag("fishburger");
+    public static final TagKey<Item> BURGER_FISHBURGER = registerItemTag("burgers/fishburger");
+    public static final TagKey<Item> SIDE_DISHES = registerItemTag("side_dishes");
+    public static final TagKey<Item> DRINKS = registerItemTag("drinks");
+    public static final TagKey<Item> SAUCES = registerItemTag("sauces");
+    public static final TagKey<Item> MAYONNAISE = registerItemTag("mayonnaise");
+    public static final TagKey<Item> SAUCES_MAYONNAISE = registerItemTag("sauces/mayonnaise");
+    public static final TagKey<Item> SWEET_SOUR_SAUCE = registerItemTag("sweet_sour_sauce");
+    public static final TagKey<Item> SAUCES_SWEET_SOUR_SAUCE = registerItemTag("sauces/sweet_sour_sauce");
+    public static final TagKey<Item> KETCHUP = registerItemTag("ketchup");
+    public static final TagKey<Item> SAUCES_KETCHUP = registerItemTag("sauces/ketchup");
+    public static final TagKey<Item> MUSTARD = registerItemTag("mustard");
+    public static final TagKey<Item> SAUCES_MUSTARD = registerItemTag("sauces/mustard");
+    public static final TagKey<Item> KNIVES = registerItemTag("knives");
 
     public ModItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture, @Nullable BlockTagProvider blockTagProvider) {
         super(output, completableFuture, blockTagProvider);
@@ -60,8 +60,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(SALTS).add(ModItems.SALT).addTag(SALT);
         getOrCreateTagBuilder(SALT).add(ModItems.SALT);
         getOrCreateTagBuilder(SALT_BLOCKS).add(ModBlocks.SALT_BLOCK.asItem());
-        getOrCreateTagBuilder(CROPS).addTag(TOMATO).addTag(LETTUCE);
-        getOrCreateTagBuilder(TOMATO).add(ModItems.TOMATO).addTag(CROPS_TOMATO);
+        getOrCreateTagBuilder(CROPS).addTag(TOMATOES).addTag(LETTUCE);
+        getOrCreateTagBuilder(TOMATOES).add(ModItems.TOMATO).addTag(CROPS_TOMATO);
         getOrCreateTagBuilder(CROPS_TOMATO).add(ModItems.TOMATO);
         getOrCreateTagBuilder(LETTUCE).add(ModItems.LETTUCE).addTag(CROPS_LETTUCE);
         getOrCreateTagBuilder(CROPS_LETTUCE).add(ModItems.LETTUCE);
@@ -70,10 +70,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(SEEDS_TOMATO).add(ModItems.TOMATO_SEEDS);
         getOrCreateTagBuilder(LETTUCE_SEEDS).add(ModItems.LETTUCE_SEEDS).addTag(SEEDS_LETTUCE);
         getOrCreateTagBuilder(SEEDS_LETTUCE).add(ModItems.LETTUCE_SEEDS);
-
         getOrCreateTagBuilder(COOKED_MEAT).add(ModItems.COOKED_BEEF_PATTY);
         getOrCreateTagBuilder(COOKED_BACON).add(ModItems.COOKED_BACON);
-
         getOrCreateTagBuilder(BURGERS).addTag(HAMBURGER).addTag(CHEESEBURGER).addTag(CHICKENBURGER).addTag(FISHBURGER);
         getOrCreateTagBuilder(HAMBURGER).add(ModItems.HAMBURGER).add(ModItems.MCBACON).add(ModItems.BIG_MAC).addTag(BURGER_HAMBURGER);
         getOrCreateTagBuilder(BURGER_HAMBURGER).add(ModItems.HAMBURGER).add(ModItems.MCBACON).add(ModItems.BIG_MAC);
@@ -97,7 +95,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(KNIVES).add(ModItems.KNIFE);
     }
 
-    private static TagKey<Item> registerItemTag(String namespace, String path) {
-        return TagKey.of(Registries.ITEM.getKey(), new Identifier(namespace, path));
+    private static TagKey<Item> registerItemTag(String path) {
+        return TagKey.of(Registries.ITEM.getKey(), new Identifier("c", path));
     }
 }

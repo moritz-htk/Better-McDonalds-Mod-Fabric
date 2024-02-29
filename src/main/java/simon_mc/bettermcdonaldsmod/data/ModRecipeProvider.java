@@ -29,8 +29,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModBlocks.SALT_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.TOMATO_SEEDS, 2)
-                .input(ModItemTagProvider.TOMATO)
-                .criterion(hasItem(ModItems.TOMATO), conditionsFromTag(ModItemTagProvider.TOMATO))
+                .input(ModItemTagProvider.TOMATOES)
+                .criterion(hasItem(ModItems.TOMATO), conditionsFromTag(ModItemTagProvider.TOMATOES))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.TOMATO_SEEDS)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.LETTUCE_SEEDS, 2)
@@ -57,9 +57,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.TORTILLA)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BEEF_PATTY, 2)
-                .input(ModItems.KNIFE)
+                .input(ModItemTagProvider.KNIVES)
                 .input(Items.BEEF)
-                .criterion(hasItem(ModItems.KNIFE), conditionsFromItem(ModItems.KNIFE))
+                .criterion(hasItem(ModItems.KNIFE), conditionsFromTag(ModItemTagProvider.KNIVES))
                 .criterion(hasItem(Items.BEEF), conditionsFromItem(Items.BEEF))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.BEEF_PATTY)));
 
@@ -76,9 +76,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.COOKED_BEEF_PATTY) + "_campfire_cooking"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.RAW_BACON, 2)
-                .input(ModItems.KNIFE)
+                .input(ModItemTagProvider.KNIVES)
                 .input(Items.PORKCHOP)
-                .criterion(hasItem(ModItems.KNIFE), conditionsFromItem(ModItems.KNIFE))
+                .criterion(hasItem(ModItems.KNIFE), conditionsFromTag(ModItemTagProvider.KNIVES))
                 .criterion(hasItem(Items.PORKCHOP), conditionsFromItem(Items.PORKCHOP))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.RAW_BACON)));
 
@@ -116,11 +116,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Items.WATER_BUCKET)
                 .input(Items.SUGAR)
                 .input(ModItemTagProvider.SALTS)
-                .input(ModItemTagProvider.TOMATO)
+                .input(ModItemTagProvider.TOMATOES)
                 .criterion(hasItem(Items.WATER_BUCKET), conditionsFromItem(Items.WATER_BUCKET))
                 .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
                 .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALTS))
-                .criterion(hasItem(ModItems.TOMATO), conditionsFromTag(ModItemTagProvider.TOMATO))
+                .criterion(hasItem(ModItems.TOMATO), conditionsFromTag(ModItemTagProvider.TOMATOES))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.KETCHUP)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.MUSTARD, 2)
@@ -154,11 +154,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Items.BREAD)
                 .input(ModItems.COOKED_BEEF_PATTY)
                 .input(ModItems.CHEESE)
-                .input(ModItems.COOKED_BACON)
+                .input(ModItemTagProvider.COOKED_BACON)
                 .criterion(hasItem(Items.BREAD), conditionsFromItem(Items.BREAD))
                 .criterion(hasItem(ModItems.COOKED_BEEF_PATTY), conditionsFromItem(ModItems.COOKED_BEEF_PATTY))
                 .criterion(hasItem(ModItems.CHEESE), conditionsFromItem(ModItems.CHEESE))
-                .criterion(hasItem(ModItems.COOKED_BACON), conditionsFromItem(ModItems.COOKED_BACON))
+                .criterion(hasItem(ModItems.COOKED_BACON), conditionsFromTag(ModItemTagProvider.COOKED_BACON))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.MCBACON)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BIG_MAC)
@@ -215,26 +215,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.MCWRAP)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SNACK_SALAD)
-                .input(ModItemTagProvider.TOMATO)
+                .input(ModItemTagProvider.TOMATOES)
                 .input(ModItemTagProvider.LETTUCE)
                 .input(Items.CARROT)
-                .criterion(hasItem(ModItems.TOMATO), conditionsFromTag(ModItemTagProvider.TOMATO))
+                .criterion(hasItem(ModItems.TOMATO), conditionsFromTag(ModItemTagProvider.TOMATOES))
                 .criterion(hasItem(ModItems.LETTUCE), conditionsFromTag(ModItemTagProvider.LETTUCE))
                 .criterion(hasItem(Items.CARROT), conditionsFromItem(Items.CARROT))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.SNACK_SALAD)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHICKEN_MCNUGGETS)
-                .input(ModItems.KNIFE)
+                .input(ModItemTagProvider.KNIVES)
                 .input(Items.COOKED_CHICKEN)
-                .criterion(hasItem(ModItems.KNIFE), conditionsFromItem(ModItems.KNIFE))
+                .criterion(hasItem(ModItems.KNIFE), conditionsFromTag(ModItemTagProvider.KNIVES))
                 .criterion(hasItem(Items.COOKED_CHICKEN), conditionsFromItem(Items.COOKED_CHICKEN))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.CHICKEN_MCNUGGETS)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.FRIES)
-                .input(ModItems.KNIFE)
+                .input(ModItemTagProvider.KNIVES)
                 .input(Items.BAKED_POTATO)
                 .input(ModItemTagProvider.SALTS)
-                .criterion(hasItem(ModItems.KNIFE), conditionsFromItem(ModItems.KNIFE))
+                .criterion(hasItem(ModItems.KNIFE), conditionsFromTag(ModItemTagProvider.KNIVES))
                 .criterion(hasItem(Items.BAKED_POTATO), conditionsFromItem(Items.BAKED_POTATO))
                 .criterion(hasItem(ModItems.SALT), conditionsFromTag(ModItemTagProvider.SALTS))
                 .offerTo(exporter, new Identifier(BetterMcDonaldsMod.MOD_ID, getRecipeName(ModItems.FRIES)));

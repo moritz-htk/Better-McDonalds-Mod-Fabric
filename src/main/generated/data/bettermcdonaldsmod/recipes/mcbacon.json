@@ -12,7 +12,7 @@
       "item": "bettermcdonaldsmod:cheese"
     },
     {
-      "item": "bettermcdonaldsmod:cooked_bacon"
+      "tag": "c:cooked_bacon"
     }
   ],
   "result": {

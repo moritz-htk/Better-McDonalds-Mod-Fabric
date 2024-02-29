@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "bettermcdonaldsmod:knife"
+      "tag": "c:knives"
     },
     {
       "item": "minecraft:beef"
