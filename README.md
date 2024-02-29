@@ -38,6 +38,9 @@ Click [here](https://github.com/moritz-htk/Better-McDonalds-Mod-Fabric/releases)
 - [kohari_nk](https://www.fiverr.com/kohari_nk) (Textures)
 - [sovseabird](https://de.fiverr.com/sovseabird) (Textures)
 
+## Dependencies
+- [Cloth Config API](https://github.com/shedaniel/cloth-config) (v13.0.121 and above)
+
 ## Maven
 Better McDonald's Mod is  available via [Curse Maven](https://www.cursemaven.com/) for developers wishing to make use of my mod.
 
